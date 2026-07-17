@@ -1,0 +1,68 @@
+name: Daily Marketplace Scraper
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (no sheet updates)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install --no-save
+
+      - name: Run marketplace scraper
+        env:
+          GOOGLE_SERVICE_ACCOUNT: ${{ secrets.GOOGLE_SERVICE_ACCOUNT }}
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+        run: npm run scrape
+
+      - name: Commit results
+        if: always()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          if git diff --quiet data/results.json 2>/dev/null; then
+            echo "No changes to commit"
+          else
+            git add data/results.json
+            git commit -m "chore: update marketplace results [skip ci]" || true
+            git push
+          fi
+
+      - name: Send email alert on failure
+        if: failure()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.EMAIL_SERVER }}
+          server_port: ${{ secrets.EMAIL_PORT }}
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: '❌ TETON Marketplace Scraper Failed'
+          to: jcsaucedo90@gmail.com
+          from: ${{ secrets.EMAIL_FROM }}
+          body: |
+            The marketplace scraper workflow failed.
+
+            Check the run details: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}

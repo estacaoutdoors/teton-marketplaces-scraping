@@ -1,280 +1,336 @@
 #!/usr/bin/env node
+/**
+ * TETON marketplace price monitor — v2 (Puppeteer rewrite)
+ *
+ * - Reads products + URLs LIVE from the Google Sheet (no urls.json step)
+ * - Renders pages with headless Chrome (7 of 11 sites are client-side rendered)
+ * - Parses Mexican price format correctly ($1,558.00 and ML's $1,356,42 cents style)
+ * - Writes full snapshot (price, original, discount %, status) to "Monitoring Results" sheet
+ * - Emits has_alerts output for the workflow so email fires only when needed
+ */
 
-const axios = require('axios');
-const cheerio = require('cheerio');
+require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
+const puppeteer = require('puppeteer');
 const { GoogleSpreadsheet } = require('google-spreadsheet');
+const { JWT } = require('google-auth-library');
 const { MARKETPLACES, SHEETS_CONFIG, THRESHOLDS } = require('../config');
 
-const URLS_FILE = path.join(__dirname, '../data/urls.json');
 const RESULTS_FILE = path.join(__dirname, '../data/results.json');
-const RESULTS_SHEET_NAME = 'Monitoring Results';
+const ALERTS_FILE = path.join(__dirname, '../data/alerts.md');
+const RESULTS_SHEET = 'Monitoring Results';
+const NAV_TIMEOUT = 45000;
+const SELECTOR_TIMEOUT = 12000;
 
-class MarketplaceScraper {
-  constructor() {
-    this.results = [];
-    this.alerts = [];
-    this.doc = null;
+/* ---------- helpers ---------- */
+
+// Column letter -> zero-based index ("A"=0, "Q"=16, "AC"=28...)
+function colIndex(letter) {
+  let n = 0;
+  for (const ch of letter.toUpperCase()) n = n * 26 + (ch.charCodeAt(0) - 64);
+  return n - 1;
+}
+
+/**
+ * Parse Mexican marketplace price text.
+ * Handles: "$1,558.00", "$830 MXN", "$14.90/kg", "1,772.", and
+ * MercadoLibre superscript cents: "$1,356,42" (last comma = decimal).
+ */
+function parseMoney(text) {
+  if (!text) return null;
+  const m = String(text).match(/\$?\s*([\d.,]+)/);
+  if (!m) return null;
+  let s = m[1].replace(/\.$/, '');
+  if (/,\d{2}$/.test(s) && (s.match(/,/g) || []).length > 1) {
+    // "1,356,42" -> last comma is cents
+    const i = s.lastIndexOf(',');
+    s = s.slice(0, i).replace(/,/g, '') + '.' + s.slice(i + 1);
+  } else {
+    s = s.replace(/,/g, '');
   }
+  const val = parseFloat(s);
+  return Number.isFinite(val) && val > 0 ? val : null;
+}
 
-  async initialize() {
-    try {
-      if (process.env.GOOGLE_SERVICE_ACCOUNT) {
-        const credentials = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT);
-        this.doc = new GoogleSpreadsheet(SHEETS_CONFIG.spreadsheetId, credentials);
-        await this.doc.loadInfo();
-      }
-    } catch (error) {
-      console.warn('⚠️  Google Sheets not available:', error.message);
+// Extract a percentage. Prefers "(22%)" style, falls back to "22%" / "-13%".
+function parsePercent(text) {
+  if (!text) return null;
+  const paren = String(text).match(/\((\d{1,3})\s*%\)/);
+  if (paren) return parseInt(paren[1], 10);
+  const plain = String(text).match(/(\d{1,3})\s*%/);
+  return plain ? parseInt(plain[1], 10) : null;
+}
+
+/* ---------- sheet access ---------- */
+
+async function openDoc() {
+  const raw = process.env.GOOGLE_SERVICE_ACCOUNT;
+  if (!raw) throw new Error('GOOGLE_SERVICE_ACCOUNT env var not set');
+  const creds = JSON.parse(raw);
+  const auth = new JWT({
+    email: creds.client_email,
+    key: creds.private_key,
+    scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+  });
+  const doc = new GoogleSpreadsheet(SHEETS_CONFIG.spreadsheetId, auth);
+  await doc.loadInfo();
+  return doc;
+}
+
+/**
+ * Read products straight from the sheet by CELL POSITION (not header names):
+ * A=name, B=SKU, C=shopify price, marketplace URLs in their configured columns.
+ */
+async function loadProducts(doc) {
+  const sheet = doc.sheetsByTitle[SHEETS_CONFIG.tabName];
+  if (!sheet) throw new Error(`Tab "${SHEETS_CONFIG.tabName}" not found`);
+  await sheet.loadCells(); // whole tab; it is small
+
+  const marketCols = Object.entries(MARKETPLACES).map(([key, cfg]) => ({
+    key,
+    idx: colIndex(cfg.column),
+  }));
+
+  const products = [];
+  for (let r = 1; r < sheet.rowCount; r++) { // r=1 -> sheet row 2 (row 1 = headers)
+    const name = sheet.getCell(r, 0).value;
+    const sku = sheet.getCell(r, 1).value;
+    if (!name || !sku) continue;
+
+    const shopifyPrice = parseMoney(String(sheet.getCell(r, colIndex(SHEETS_CONFIG.shopifyPriceColumn || 'K')).value ?? ''));
+    const urls = {};
+    for (const { key, idx } of marketCols) {
+      const cell = sheet.getCell(r, idx);
+      // hyperlink-formatted cells expose the URL separately from display text
+      const url = cell.hyperlink || (typeof cell.value === 'string' && cell.value.startsWith('http') ? cell.value : null);
+      if (url) urls[key] = url.trim();
     }
+    products.push({ productName: String(name).trim(), sku: String(sku).trim(), shopifyPrice, marketplaceUrls: urls });
   }
+  return products;
+}
 
-  async loadUrls() {
-    try {
-      const data = fs.readFileSync(URLS_FILE, 'utf-8');
-      return JSON.parse(data);
-    } catch (error) {
-      throw new Error(`Failed to load URLs from ${URLS_FILE}. Run 'npm run fetch-urls' first.`);
-    }
-  }
+/* ---------- scraping ---------- */
 
-  async scrapeMarketplace(marketplace, url, shopifyPrice) {
-    const config = MARKETPLACES[marketplace];
-    const result = {
-      marketplace,
-      url,
-      status: 'pending',
-      errors: []
+async function extractFromPage(page, cfg) {
+  return page.evaluate((sel) => {
+    const textOf = (s) => {
+      if (!s) return null;
+      const el = document.querySelector(s);
+      return el ? el.textContent.trim() : null;
     };
-
-    try {
-      const response = await axios.get(url, {
-        timeout: 10000,
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-        }
-      });
-
-      const $ = cheerio.load(response.data);
-      let price = null;
-      let discount = null;
-
-      if (marketplace === 'amazon') {
-        const pageText = $.text();
-        if (!pageText.includes(config.seller)) {
-          result.errors.push(`Not found in "Also sold by". Seller: ${config.seller}`);
-          result.status = 'error';
-          return result;
-        }
-        price = this.extractPrice($, '.a-price-whole');
-        discount = this.extractDiscount($, '.a-badge-percent-off');
-      } else {
-        price = this.extractPrice($, config.selector.price);
-        discount = this.extractDiscount($, config.selector.discount);
-      }
-
-      if (!price) {
-        result.errors.push('Could not extract price from page');
-        result.status = 'error';
-        return result;
-      }
-
-      result.marketplacePrice = price;
-      result.discount = discount || 0;
-
-      const expectedPrice = shopifyPrice / config.formula;
-      const variance = Math.abs(price - expectedPrice) / expectedPrice;
-
-      if (variance > THRESHOLDS.priceVariance) {
-        result.errors.push(
-          `Price mismatch. Expected: ${expectedPrice.toFixed(2)}, Got: ${price.toFixed(2)}`
-        );
-      }
-
-      if (discount <= THRESHOLDS.minDiscount) {
-        result.errors.push(`No discount applied (${discount || 0}%)`);
-      }
-
-      result.status = result.errors.length === 0 ? 'ok' : 'error';
-      return result;
-    } catch (error) {
-      result.errors.push(`Scrape error: ${error.message}`);
-      result.status = 'error';
-      return result;
-    }
-  }
-
-  extractPrice(cheerioObj, selector) {
-    let text = cheerioObj(selector).first().text().trim();
-    text = text.replace(/[^\d.,]/g, '').replace(/,/g, '.');
-    return parseFloat(text) || null;
-  }
-
-  extractDiscount(cheerioObj, selector) {
-    let text = cheerioObj(selector).first().text().trim();
-    const match = text.match(/(\d+)/);
-    return match ? parseInt(match[1]) : null;
-  }
-
-  async scrapeAllProducts(urls) {
-    for (const product of urls) {
-      console.log(`\n📦 Processing: ${product.productName} (SKU: ${product.sku})`);
-
-      const productResults = {
-        productName: product.productName,
-        sku: product.sku,
-        shopifyPrice: product.shopifyPrice,
-        marketplaces: {},
-        timestamp: new Date().toISOString()
-      };
-
-      for (const [marketplaceKey, url] of Object.entries(product.marketplaceUrls || {})) {
-        if (!url) continue;
-
-        console.log(`  🌐 ${MARKETPLACES[marketplaceKey].name}...`);
-        const result = await this.scrapeMarketplace(marketplaceKey, url, product.shopifyPrice);
-        productResults.marketplaces[marketplaceKey] = result;
-
-        if (result.status === 'error') {
-          this.alerts.push({
-            product: product.productName,
-            sku: product.sku,
-            marketplace: MARKETPLACES[marketplaceKey].name,
-            issues: result.errors
-          });
-        }
-      }
-
-      this.results.push(productResults);
-    }
-  }
-
-  async updateSheet() {
-    if (!this.doc) {
-      console.log('⚠️  Skipping sheet update (Google Sheets not configured)');
-      return;
-    }
-
-    try {
-      let resultsSheet = this.doc.sheetsByTitle[RESULTS_SHEET_NAME];
-
-      if (!resultsSheet) {
-        console.log(`📊 Creating new sheet: ${RESULTS_SHEET_NAME}`);
-        resultsSheet = await this.doc.addSheet({ title: RESULTS_SHEET_NAME });
-      }
-
-      const headers = ['Product', 'SKU', 'Shopify Price', ...Object.values(MARKETPLACES).map(m => m.name), 'Overall Status'];
-
-      await resultsSheet.clear();
-      await resultsSheet.setHeaderRow(headers);
-
-      for (const result of this.results) {
-        const row = {
-          'Product': result.productName,
-          'SKU': result.sku,
-          'Shopify Price': result.shopifyPrice
-        };
-
-        for (const marketplace of Object.keys(MARKETPLACES)) {
-          const marketplaceResult = result.marketplaces[marketplace];
-          if (marketplaceResult) {
-            row[MARKETPLACES[marketplace].name] =
-              marketplaceResult.status === 'ok' ? '✅ OK' : '❌ ERROR';
-          } else {
-            row[MARKETPLACES[marketplace].name] = '-';
+    const out = {
+      priceText: textOf(sel.price),
+      originalText: sel.originalPrice ? textOf(sel.originalPrice) : null,
+      discountText: sel.discount ? textOf(sel.discount) : null,
+      priceFractionText: sel.priceFraction ? textOf(sel.priceFraction) : null,
+      jsonLdPrice: null,
+      bodySnippet: document.body ? document.body.innerText.slice(0, 3000) : '',
+    };
+    // JSON-LD fallback (Liverpool, VTEX sites embed Product schema)
+    for (const script of document.querySelectorAll('script[type="application/ld+json"]')) {
+      try {
+        const data = JSON.parse(script.textContent);
+        const items = Array.isArray(data) ? data : [data];
+        for (const item of items) {
+          if (item && item['@type'] === 'Product' && item.offers) {
+            const offer = Array.isArray(item.offers) ? item.offers[0] : item.offers;
+            const p = offer.price ?? offer.lowPrice;
+            if (p) { out.jsonLdPrice = String(p); break; }
           }
         }
-
-        const hasErrors = Object.values(result.marketplaces).some(m => m.status === 'error');
-        row['Overall Status'] = hasErrors ? '❌ Issues' : '✅ OK';
-
-        await resultsSheet.addRows([row]);
-      }
-
-      console.log('✅ Sheet updated with results');
-    } catch (error) {
-      console.error('❌ Sheet update failed:', error.message);
+      } catch (_) { /* ignore malformed blocks */ }
+      if (out.jsonLdPrice) break;
     }
-  }
+    return out;
+  }, cfg.selector);
+}
 
-  saveResults() {
-    const dir = path.dirname(RESULTS_FILE);
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
-    fs.writeFileSync(RESULTS_FILE, JSON.stringify(this.results, null, 2));
-    console.log(`\n💾 Results saved to ${RESULTS_FILE}`);
-  }
+async function scrapeOne(page, marketplaceKey, url, shopifyPrice) {
+  const cfg = MARKETPLACES[marketplaceKey];
+  const result = { marketplace: marketplaceKey, url, status: 'ok', price: null, originalPrice: null, discount: null, errors: [] };
 
-  generateReport() {
-    console.log('\n' + '='.repeat(80));
-    console.log('MARKETPLACE MONITORING REPORT');
-    console.log('='.repeat(80));
-
-    if (this.alerts.length === 0) {
-      console.log('✅ All products OK - no issues found');
-    } else {
-      console.log(`⚠️  ${this.alerts.length} alert(s) found:\n`);
-      for (const alert of this.alerts) {
-        console.log(`📌 ${alert.product} (${alert.sku}) - ${alert.marketplace}`);
-        alert.issues.forEach(issue => console.log(`   ❌ ${issue}`));
-      }
-    }
-
-    console.log('\n' + '='.repeat(80));
-
-    if (process.env.GITHUB_STEP_SUMMARY) {
-      this.writeGitHubSummary();
-    }
-  }
-
-  writeGitHubSummary() {
-    const summaryFile = process.env.GITHUB_STEP_SUMMARY;
-    let summary = '# 🛍️ Marketplace Monitoring Report\n\n';
-
-    if (this.alerts.length === 0) {
-      summary += '✅ **All products OK** - No issues detected.\n';
-    } else {
-      summary += `⚠️ **${this.alerts.length} Issue(s) Found**\n\n`;
-      summary += '| Product | SKU | Marketplace | Issues |\n';
-      summary += '|---------|-----|-------------|--------|\n';
-
-      for (const alert of this.alerts) {
-        const issues = alert.issues.join('; ');
-        summary += `| ${alert.product} | ${alert.sku} | ${alert.marketplace} | ${issues} |\n`;
-      }
-    }
-
-    fs.appendFileSync(summaryFile, summary);
-  }
-
-  async run() {
+  try {
+    await page.goto(url, { waitUntil: 'networkidle2', timeout: NAV_TIMEOUT });
     try {
-      console.log('🚀 Starting marketplace scraper...');
-      await this.initialize();
+      await page.waitForSelector(cfg.selector.price, { timeout: SELECTOR_TIMEOUT });
+    } catch (_) { /* fall through to JSON-LD fallback */ }
 
-      const urls = await this.loadUrls();
-      console.log(`✅ Loaded URLs for ${urls.length} product(s)`);
+    const raw = await extractFromPage(page, cfg);
 
-      await this.scrapeAllProducts(urls);
-      await this.updateSheet();
-      this.saveResults();
-      this.generateReport();
-
-      if (this.alerts.length > 0) {
-        process.exit(1);
-      }
-    } catch (error) {
-      console.error('❌ Fatal error:', error.message);
-      process.exit(1);
+    // price
+    let price = parseMoney(raw.priceText);
+    if (price && raw.priceFractionText) { // Amazon whole+fraction
+      const frac = parseInt(raw.priceFractionText.replace(/\D/g, ''), 10);
+      if (Number.isFinite(frac)) price = Math.floor(price) + frac / 100;
     }
+    if (!price) price = parseMoney(raw.jsonLdPrice);
+    if (!price) {
+      result.status = 'error';
+      result.errors.push('Could not extract price (selector empty and no JSON-LD) — check link or selector');
+      return result;
+    }
+    result.price = price;
+    result.originalPrice = parseMoney(raw.originalText);
+
+    // discount
+    if (cfg.discountType === 'badge' && raw.discountText) {
+      result.discount = parsePercent(raw.discountText);
+    }
+    if (result.discount == null && result.originalPrice && result.originalPrice > price) {
+      result.discount = Math.round((1 - price / result.originalPrice) * 100);
+    }
+    if (result.discount == null) result.discount = 0;
+
+    // Amazon: confirm our seller appears on the page
+    if (cfg.requiresSellerSection && cfg.seller) {
+      const found = raw.bodySnippet.toUpperCase().includes(cfg.seller.toUpperCase());
+      if (!found) result.errors.push(`Seller "${cfg.seller}" not found on page`);
+    }
+
+    // validations
+    if (shopifyPrice) {
+      const expected = shopifyPrice / cfg.formula;
+      result.expectedPrice = Math.round(expected * 100) / 100;
+      const variance = Math.abs(price - expected) / expected;
+      if (variance > THRESHOLDS.priceVariance) {
+        result.errors.push(`Price mismatch: expected $${expected.toFixed(2)} (Shopify ${shopifyPrice} ÷ ${cfg.formula}), got $${price.toFixed(2)}`);
+      }
+    }
+    if (result.discount <= THRESHOLDS.minDiscount) {
+      result.errors.push(`No discount applied (${result.discount}%)`);
+    }
+
+    if (result.errors.length) result.status = 'alert';
+    return result;
+  } catch (err) {
+    result.status = 'error';
+    result.errors.push(`Navigation/scrape failed: ${err.message.split('\n')[0]}`);
+    return result;
   }
 }
 
-if (require.main === module) {
-  const scraper = new MarketplaceScraper();
-  scraper.run();
+/* ---------- output ---------- */
+
+/**
+ * Simple matrix, overwritten every day:
+ * one row per SKU, one column per marketplace.
+ * Cell format:  "$1,759 (-20%) ✓"   price correct, discount active
+ *               "$1,850 (0%) ✗ SIN DESC"        no discount
+ *               "$1,200 (-15%) ✗ PRECIO"        price off formula
+ *               "✗ ERROR: <reason>"             link broken / not extractable
+ */
+function cellFor(r) {
+  if (r.status === 'error') return `✗ ERROR: ${r.errors[0] || 'unknown'}`;
+  const base = `$${r.price.toLocaleString('en-US')} (${r.discount > 0 ? '-' : ''}${r.discount}%)`;
+  if (r.status === 'ok') return `${base} ✓`;
+  const flags = [];
+  if (r.errors.some((e) => e.startsWith('No discount'))) flags.push('SIN DESC');
+  if (r.errors.some((e) => e.startsWith('Price mismatch'))) flags.push('PRECIO');
+  if (r.errors.some((e) => e.startsWith('Seller'))) flags.push('VENDEDOR');
+  return `${base} ✗ ${flags.join(', ') || 'REVISAR'}`;
 }
 
-module.exports = MarketplaceScraper;
+async function writeResultsSheet(doc, results) {
+  let sheet = doc.sheetsByTitle[RESULTS_SHEET];
+  if (!sheet) sheet = await doc.addSheet({ title: RESULTS_SHEET });
+  await sheet.clear();
+
+  const marketNames = Object.values(MARKETPLACES).map((m) => m.name);
+  const headers = ['Product', 'SKU', 'Shopify Price', ...marketNames, 'Updated'];
+  await sheet.setHeaderRow(headers);
+
+  const today = new Date().toISOString().slice(0, 10);
+  const rows = results.map((product) => {
+    const row = {
+      'Product': product.productName,
+      'SKU': product.sku,
+      'Shopify Price': product.shopifyPrice ?? '',
+      'Updated': today,
+    };
+    for (const [key, cfg] of Object.entries(MARKETPLACES)) {
+      const r = product.marketplaces[key];
+      row[cfg.name] = r ? cellFor(r) : '—'; // no URL in sheet for this marketplace
+    }
+    return row;
+  });
+
+  if (rows.length) await sheet.addRows(rows); // single batched call
+  console.log(`📊 Wrote ${rows.length} product rows to "${RESULTS_SHEET}"`);
+}
+
+function writeLocalOutputs(results, alerts) {
+  fs.mkdirSync(path.dirname(RESULTS_FILE), { recursive: true });
+  fs.writeFileSync(RESULTS_FILE, JSON.stringify({ date: new Date().toISOString(), results }, null, 2));
+
+  let md = `# Marketplace alerts — ${new Date().toISOString().slice(0, 10)}\n\n`;
+  if (!alerts.length) {
+    md += 'No issues found. All products OK.\n';
+  } else {
+    for (const a of alerts) md += `- **${a.product}** (${a.sku}) — ${a.marketplace}: ${a.issues.join('; ')}\n`;
+  }
+  fs.writeFileSync(ALERTS_FILE, md);
+
+  if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, md);
+  if (process.env.GITHUB_OUTPUT) fs.appendFileSync(process.env.GITHUB_OUTPUT, `has_alerts=${alerts.length > 0}\n`);
+}
+
+/* ---------- main ---------- */
+
+(async () => {
+  console.log('🚀 TETON marketplace monitor v2');
+  const doc = await openDoc();
+  const products = await loadProducts(doc);
+  console.log(`✅ Loaded ${products.length} products from sheet`);
+
+  const browser = await puppeteer.launch({
+    headless: 'new',
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--lang=es-MX'],
+  });
+  const page = await browser.newPage();
+  await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36');
+  await page.setViewport({ width: 1366, height: 900 });
+  await page.setExtraHTTPHeaders({ 'Accept-Language': 'es-MX,es;q=0.9' });
+  // speed: skip images/media/fonts
+  await page.setRequestInterception(true);
+  page.on('request', (req) =>
+    ['image', 'media', 'font'].includes(req.resourceType()) ? req.abort() : req.continue()
+  );
+
+  const results = [];
+  const alerts = [];
+
+  for (const product of products) {
+    console.log(`\n📦 ${product.productName} (${product.sku})`);
+    const entry = { ...product, marketplaces: {} };
+
+    for (const [key, url] of Object.entries(product.marketplaceUrls)) {
+      process.stdout.write(`  ${MARKETPLACES[key].name}... `);
+      const r = await scrapeOne(page, key, url, product.shopifyPrice);
+      entry.marketplaces[key] = r;
+      console.log(r.status === 'ok' ? `✅ $${r.price} (-${r.discount}%)` : `⚠️ ${r.errors[0]}`);
+      if (r.status !== 'ok') {
+        alerts.push({ product: product.productName, sku: product.sku, marketplace: MARKETPLACES[key].name, issues: r.errors });
+      }
+      await new Promise((res) => setTimeout(res, 1500)); // be polite between requests
+    }
+    results.push(entry);
+  }
+
+  await browser.close();
+
+  try {
+    await writeResultsSheet(doc, results);
+  } catch (err) {
+    console.error('❌ Sheet write failed:', err.message);
+  }
+  writeLocalOutputs(results, alerts);
+
+  console.log(`\n${alerts.length ? `⚠️ ${alerts.length} alert(s) — see data/alerts.md` : '✅ All OK'}`);
+  // NOTE: always exit 0 — alerts are business signals, not build failures.
+  // The workflow reads has_alerts output to decide whether to email.
+})().catch((err) => {
+  console.error('❌ Fatal:', err);
+  process.exit(1);
+});

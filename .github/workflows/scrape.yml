@@ -2,22 +2,14 @@ name: Daily Marketplace Scraper
 
 on:
   schedule:
+    # 6am UTC daily (12am Mexico City)
     - cron: '0 6 * * *'
   workflow_dispatch:
-    inputs:
-      dry_run:
-        description: 'Dry run (no sheet updates)'
-        required: false
-        default: 'false'
-        type: choice
-        options:
-          - 'false'
-          - 'true'
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
 
     steps:
       - name: Checkout repository
@@ -33,25 +25,40 @@ jobs:
         run: npm install --no-save
 
       - name: Run marketplace scraper
+        id: scrape
         env:
           GOOGLE_SERVICE_ACCOUNT: ${{ secrets.GOOGLE_SERVICE_ACCOUNT }}
-          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
         run: npm run scrape
 
-      - name: Commit results
+      - name: Commit results history
         if: always()
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          if git diff --quiet data/results.json 2>/dev/null; then
+          git add data/results.json data/alerts.md || true
+          if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git add data/results.json
-            git commit -m "chore: update marketplace results [skip ci]" || true
+            git commit -m "chore: daily results $(date -u +%F) [skip ci]"
             git push
           fi
 
-      - name: Send email alert on failure
+      # Email ONLY when the scraper found real issues (not every day)
+      - name: Send alert email
+        if: steps.scrape.outputs.has_alerts == 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.EMAIL_SERVER }}
+          server_port: ${{ secrets.EMAIL_PORT }}
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: '⚠️ TETON Marketplaces: issues detected'
+          to: jcsaucedo90@gmail.com
+          from: ${{ secrets.EMAIL_FROM }}
+          body: file://data/alerts.md
+
+      # Email if the job itself crashed (auth failure, sheet unreachable, etc.)
+      - name: Send failure email
         if: failure()
         uses: dawidd6/action-send-mail@v3
         with:
@@ -59,10 +66,9 @@ jobs:
           server_port: ${{ secrets.EMAIL_PORT }}
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: '❌ TETON Marketplace Scraper Failed'
+          subject: '❌ TETON Marketplace scraper crashed'
           to: jcsaucedo90@gmail.com
           from: ${{ secrets.EMAIL_FROM }}
           body: |
-            The marketplace scraper workflow failed.
-
-            Check the run details: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            The scraper workflow itself failed (not a price issue).
+            Logs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}

@@ -171,7 +171,12 @@ async function scrapeOne(page, marketplaceKey, url, shopifyPrice) {
     if (!price) price = parseMoney(raw.jsonLdPrice);
     if (!price) {
       result.status = 'error';
-      result.errors.push('Could not extract price (selector empty and no JSON-LD) — check link or selector');
+      const body = (raw.bodySnippet || '').toLowerCase();
+      if (body.includes('no está disponible') || body.includes('no esta disponible') || body.includes('agotado')) {
+        result.errors.push('Listing unavailable (product/variant inactive on marketplace)');
+      } else {
+        result.errors.push('Could not extract price (selector empty and no JSON-LD) — check link or selector');
+      }
       return result;
     }
     result.price = price;

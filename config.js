@@ -22,7 +22,7 @@ const MARKETPLACES = {
     // Verified on: MLM29821357 → $1,356.42 / $1,739 / "22% OFF"
     selector: {
       price: '.ui-pdp-price__second-line .andes-money-amount',
-      originalPrice: 's.andes-money-amount--previous',
+      originalPrice: '.ui-pdp-price s.andes-money-amount--previous', // scoped: avoid related-product strike prices
       discount: '.ui-pdp-price__second-line .andes-money-amount__discount'  // e.g. "22% OFF"
     },
     discountType: 'badge'

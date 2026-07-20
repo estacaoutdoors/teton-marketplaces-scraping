@@ -3,9 +3,6 @@ permissions:
 name: Daily Marketplace Scraper
 
 on:
-  schedule:
-    # 6am UTC daily (12am Mexico City)
-    - cron: '0 6 * * *'
   workflow_dispatch:
 
 jobs:

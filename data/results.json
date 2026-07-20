@@ -1,0 +1,1651 @@
+{
+  "date": "2026-07-20T20:53:43.828Z",
+  "results": [
+    {
+      "productName": "Altos-s 0F Degree Sleeping Bag",
+      "sku": "1169",
+      "shopifyPrice": 2699,
+      "marketplaceUrls": {
+        "liverpool": "https://www.liverpool.com.mx/tienda/pdp/Sleeping-bag-teton-altos/1158771116?skuId=1158771116",
+        "mercadolibre": "https://www.mercadolibre.com.mx/saco-de-dormir-momia-teton-sports-altos-s-18c-0f-ultraligero-para-mochileros-sleeping-frio-extremo-alta-montana/p/MLM36705984?pdp_filters=item_id%3AMLM2286518717",
+        "amazon": "https://www.amazon.com.mx/dp/B075JD2WGZ?th=1&psc=1",
+        "coppel": "https://www.coppel.com/pdp/sleeping-tipo-momia-altos-s-18c-alta-montana-teton-mkp-85341089",
+        "elektra": "https://www.elektra.mx/sleeping-tipo-momia-altos-s--17%C2%B0c-naranja-teton-1300350523/p",
+        "walmart": "https://www.walmart.com.mx/ip/Sleeping-Tipo-Momia-ALTOS-S-18-C-0-F-de-Plumas-Sinteticas-Alta-Montana-TETON/00081735401169",
+        "sears": "https://www.sears.com.mx/producto/3382326/sleeping-tipo-momia-altos-s-0-f-18-c-de-plumas-sinteticas-alta-montana-teton",
+        "sanborns": "https://www.sanborns.com.mx/producto/521746/sleeping-tipo-momia-altos-s-0-f-18-c-de-plumas-sinteticas-alta-montana-teton",
+        "marti": "https://www.marti.mx/bolsa-de-dormir-tipo-momia-campismo-teton-altos-s--18c-1169-1127976122/p",
+        "chedraui": "https://www.chedraui.com.mx/sleeping-tipo-momia-alta-montana-teton-naranja-altos-s-18-grados-6020045/p",
+        "lamarina": "https://www.lamarina.com.mx/sleeping-tipo-momia-altos-s-0%C2%B0f---18%C2%B0c--de-plumas-sinteticas-alta-monta%C3%B1a-teton-11014290/p"
+      },
+      "marketplaces": {
+        "liverpool": {
+          "marketplace": "liverpool",
+          "url": "https://www.liverpool.com.mx/tienda/pdp/Sleeping-bag-teton-altos/1158771116?skuId=1158771116",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "mercadolibre": {
+          "marketplace": "mercadolibre",
+          "url": "https://www.mercadolibre.com.mx/saco-de-dormir-momia-teton-sports-altos-s-18c-0f-ultraligero-para-mochileros-sleeping-frio-extremo-alta-montana/p/MLM36705984?pdp_filters=item_id%3AMLM2286518717",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "amazon": {
+          "marketplace": "amazon",
+          "url": "https://www.amazon.com.mx/dp/B075JD2WGZ?th=1&psc=1",
+          "status": "alert",
+          "price": 2008.03,
+          "originalPrice": 2008.03,
+          "discount": 5,
+          "errors": [
+            "Seller \"ESTACA OUTDOORS\" not found on page",
+            "Price mismatch: expected $3175.29 (Shopify 2699 ÷ 0.85), got $2008.03"
+          ],
+          "expectedPrice": 3175.29
+        },
+        "coppel": {
+          "marketplace": "coppel",
+          "url": "https://www.coppel.com/pdp/sleeping-tipo-momia-altos-s-18c-alta-montana-teton-mkp-85341089",
+          "status": "alert",
+          "price": 2879,
+          "originalPrice": 3598,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $3598.67 (Shopify 2699 ÷ 0.75), got $2879.00"
+          ],
+          "expectedPrice": 3598.67
+        },
+        "elektra": {
+          "marketplace": "elektra",
+          "url": "https://www.elektra.mx/sleeping-tipo-momia-altos-s--17%C2%B0c-naranja-teton-1300350523/p",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "walmart": {
+          "marketplace": "walmart",
+          "url": "https://www.walmart.com.mx/ip/Sleeping-Tipo-Momia-ALTOS-S-18-C-0-F-de-Plumas-Sinteticas-Alta-Montana-TETON/00081735401169",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "sears": {
+          "marketplace": "sears",
+          "url": "https://www.sears.com.mx/producto/3382326/sleeping-tipo-momia-altos-s-0-f-18-c-de-plumas-sinteticas-alta-montana-teton",
+          "status": "alert",
+          "price": 3059,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "Price mismatch: expected $3598.67 (Shopify 2699 ÷ 0.75), got $3059.00",
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 3598.67
+        },
+        "sanborns": {
+          "marketplace": "sanborns",
+          "url": "https://www.sanborns.com.mx/producto/521746/sleeping-tipo-momia-altos-s-0-f-18-c-de-plumas-sinteticas-alta-montana-teton",
+          "status": "alert",
+          "price": 3059,
+          "originalPrice": 3599,
+          "discount": 15,
+          "errors": [
+            "Price mismatch: expected $3598.67 (Shopify 2699 ÷ 0.75), got $3059.00"
+          ],
+          "expectedPrice": 3598.67
+        },
+        "marti": {
+          "marketplace": "marti",
+          "url": "https://www.marti.mx/bolsa-de-dormir-tipo-momia-campismo-teton-altos-s--18c-1169-1127976122/p",
+          "status": "alert",
+          "price": 2879,
+          "originalPrice": 3599,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $3598.67 (Shopify 2699 ÷ 0.75), got $2879.00"
+          ],
+          "expectedPrice": 3598.67
+        },
+        "chedraui": {
+          "marketplace": "chedraui",
+          "url": "https://www.chedraui.com.mx/sleeping-tipo-momia-alta-montana-teton-naranja-altos-s-18-grados-6020045/p",
+          "status": "alert",
+          "price": 3599,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 3598.67
+        },
+        "lamarina": {
+          "marketplace": "lamarina",
+          "url": "https://www.lamarina.com.mx/sleeping-tipo-momia-altos-s-0%C2%B0f---18%C2%B0c--de-plumas-sinteticas-alta-monta%C3%B1a-teton-11014290/p",
+          "status": "alert",
+          "price": 3599,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 3598.67
+        }
+      }
+    },
+    {
+      "productName": "Bridger Junior 0F Canvas Sleeping Bag",
+      "sku": "1234PC",
+      "shopifyPrice": 1649,
+      "marketplaceUrls": {
+        "liverpool": "https://www.liverpool.com.mx/tienda/pdp/sleeping-bag-teton-lil-bridger-(/99973226041",
+        "mercadolibre": "https://www.mercadolibre.com.mx/sleeping-lil-bridger-0f-17c-167m-franela-teton-camping/up/MLMU3862650797",
+        "amazon": "https://www.amazon.com.mx/dp/B0B833QMN7",
+        "coppel": "https://www.coppel.com/pdp/sleeping-lil-bridger-17c-para-ninos-marron-teton-mkp-85331033",
+        "elektra": "https://www.elektra.mx/sleeping-lil-bridger--17%C2%B0c-para-ninos-cafe-teton-1300350511/p",
+        "walmart": "https://www.walmart.com.mx/ip/Sleeping-Lil-Bridger-0-F-18-C-Junior-Canvas-para-Ninos-TETON-cafe-Individual/00081735401546",
+        "sears": "https://www.sears.com.mx/producto/3382272/sleeping-lil-bridger-17-junior-canvas-para-ninos-cafe-rojo-teton",
+        "sanborns": "https://www.sanborns.com.mx/producto/521693/sleeping-lil-bridger-17-junior-canvas-para-ninos-cafe-rojo-teton",
+        "marti": "https://www.marti.mx/bolsa-de-dormir-campismo-teton-lil-bridger--18c-cf-infantil-unisex-10041-1127976049/p",
+        "chedraui": "https://www.chedraui.com.mx/sleeping-para-ninos-teton-cafe-lil-bridger-18-grados-6020218/p",
+        "lamarina": "https://www.lamarina.com.mx/sleeping-lil-bridger-0%C2%B0f---18%C2%B0c--junior-canvas-para-ni%C3%B1os-teton-11014291/p"
+      },
+      "marketplaces": {
+        "liverpool": {
+          "marketplace": "liverpool",
+          "url": "https://www.liverpool.com.mx/tienda/pdp/sleeping-bag-teton-lil-bridger-(/99973226041",
+          "status": "alert",
+          "price": 1759,
+          "originalPrice": 2198,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $2198.67 (Shopify 1649 ÷ 0.75), got $1759.00"
+          ],
+          "expectedPrice": 2198.67
+        },
+        "mercadolibre": {
+          "marketplace": "mercadolibre",
+          "url": "https://www.mercadolibre.com.mx/sleeping-lil-bridger-0f-17c-167m-franela-teton-camping/up/MLMU3862650797",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "amazon": {
+          "marketplace": "amazon",
+          "url": "https://www.amazon.com.mx/dp/B0B833QMN7",
+          "status": "alert",
+          "price": 1435.67,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "Seller \"ESTACA OUTDOORS\" not found on page",
+            "Price mismatch: expected $1940.00 (Shopify 1649 ÷ 0.85), got $1435.67",
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 1940
+        },
+        "coppel": {
+          "marketplace": "coppel",
+          "url": "https://www.coppel.com/pdp/sleeping-lil-bridger-17c-para-ninos-marron-teton-mkp-85331033",
+          "status": "alert",
+          "price": 1759,
+          "originalPrice": 2198,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $2198.67 (Shopify 1649 ÷ 0.75), got $1759.00"
+          ],
+          "expectedPrice": 2198.67
+        },
+        "elektra": {
+          "marketplace": "elektra",
+          "url": "https://www.elektra.mx/sleeping-lil-bridger--17%C2%B0c-para-ninos-cafe-teton-1300350511/p",
+          "status": "alert",
+          "price": 1869,
+          "originalPrice": 2199,
+          "discount": 15,
+          "errors": [
+            "Price mismatch: expected $2198.67 (Shopify 1649 ÷ 0.75), got $1869.00"
+          ],
+          "expectedPrice": 2198.67
+        },
+        "walmart": {
+          "marketplace": "walmart",
+          "url": "https://www.walmart.com.mx/ip/Sleeping-Lil-Bridger-0-F-18-C-Junior-Canvas-para-Ninos-TETON-cafe-Individual/00081735401546",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "sears": {
+          "marketplace": "sears",
+          "url": "https://www.sears.com.mx/producto/3382272/sleeping-lil-bridger-17-junior-canvas-para-ninos-cafe-rojo-teton",
+          "status": "alert",
+          "price": 1869,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "Price mismatch: expected $2198.67 (Shopify 1649 ÷ 0.75), got $1869.00",
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 2198.67
+        },
+        "sanborns": {
+          "marketplace": "sanborns",
+          "url": "https://www.sanborns.com.mx/producto/521693/sleeping-lil-bridger-17-junior-canvas-para-ninos-cafe-rojo-teton",
+          "status": "alert",
+          "price": 1869,
+          "originalPrice": 2199,
+          "discount": 15,
+          "errors": [
+            "Price mismatch: expected $2198.67 (Shopify 1649 ÷ 0.75), got $1869.00"
+          ],
+          "expectedPrice": 2198.67
+        },
+        "marti": {
+          "marketplace": "marti",
+          "url": "https://www.marti.mx/bolsa-de-dormir-campismo-teton-lil-bridger--18c-cf-infantil-unisex-10041-1127976049/p",
+          "status": "alert",
+          "price": 1759,
+          "originalPrice": 2199,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $2198.67 (Shopify 1649 ÷ 0.75), got $1759.00"
+          ],
+          "expectedPrice": 2198.67
+        },
+        "chedraui": {
+          "marketplace": "chedraui",
+          "url": "https://www.chedraui.com.mx/sleeping-para-ninos-teton-cafe-lil-bridger-18-grados-6020218/p",
+          "status": "alert",
+          "price": 2199,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 2198.67
+        },
+        "lamarina": {
+          "marketplace": "lamarina",
+          "url": "https://www.lamarina.com.mx/sleeping-lil-bridger-0%C2%B0f---18%C2%B0c--junior-canvas-para-ni%C3%B1os-teton-11014291/p",
+          "status": "alert",
+          "price": 2199,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 2198.67
+        }
+      }
+    },
+    {
+      "productName": "Celsius Regular 0F Sleeping Bag - Ivy/Grey",
+      "sku": "1406VY",
+      "shopifyPrice": 2099,
+      "marketplaceUrls": {
+        "liverpool": "https://www.liverpool.com.mx/tienda/pdp/sleeping-bag-teton-celsius-0%C3%A1f-unisex/99973068980",
+        "mercadolibre": "https://www.mercadolibre.com.mx/sleeping--celsius--18c-0f-teton/up/MLMU3877810648?product_trigger_id=MLM62256126&picker=true&quantity=1",
+        "amazon": "https://www.amazon.com.mx/dp/B0CHN5YZFN",
+        "coppel": "https://www.coppel.com/pdp/sleeping-celsius-17c-verde-teton-mkp-85331044",
+        "elektra": "https://www.elektra.mx/sleeping-celsius-17c-verde-teton-1300350463/p",
+        "walmart": "https://www.walmart.com.mx/ip/Sleeping-Celsius-18-C-0-F-TETON-verde-Individual/00081735401566",
+        "marti": "https://www.marti.mx/bolsa-de-dormir-teton-campismo-celsius--18c-multicolor-1127993120/p",
+        "chedraui": "https://www.chedraui.com.mx/sleeping-teton-verde-celsius-18-grados-centigrados-6020162/p",
+        "lamarina": "https://www.lamarina.com.mx/sleeping--celsius---18%C2%B0c-verde-teton-11013716/p"
+      },
+      "marketplaces": {
+        "liverpool": {
+          "marketplace": "liverpool",
+          "url": "https://www.liverpool.com.mx/tienda/pdp/sleeping-bag-teton-celsius-0%C3%A1f-unisex/99973068980",
+          "status": "alert",
+          "price": 2239,
+          "originalPrice": 2798,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $2798.67 (Shopify 2099 ÷ 0.75), got $2239.00"
+          ],
+          "expectedPrice": 2798.67
+        },
+        "mercadolibre": {
+          "marketplace": "mercadolibre",
+          "url": "https://www.mercadolibre.com.mx/sleeping--celsius--18c-0f-teton/up/MLMU3877810648?product_trigger_id=MLM62256126&picker=true&quantity=1",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "amazon": {
+          "marketplace": "amazon",
+          "url": "https://www.amazon.com.mx/dp/B0CHN5YZFN",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "coppel": {
+          "marketplace": "coppel",
+          "url": "https://www.coppel.com/pdp/sleeping-celsius-17c-verde-teton-mkp-85331044",
+          "status": "alert",
+          "price": 2239,
+          "originalPrice": 2798,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $2798.67 (Shopify 2099 ÷ 0.75), got $2239.00"
+          ],
+          "expectedPrice": 2798.67
+        },
+        "elektra": {
+          "marketplace": "elektra",
+          "url": "https://www.elektra.mx/sleeping-celsius-17c-verde-teton-1300350463/p",
+          "status": "alert",
+          "price": 2379,
+          "originalPrice": 2799,
+          "discount": 15,
+          "errors": [
+            "Price mismatch: expected $2798.67 (Shopify 2099 ÷ 0.75), got $2379.00"
+          ],
+          "expectedPrice": 2798.67
+        },
+        "walmart": {
+          "marketplace": "walmart",
+          "url": "https://www.walmart.com.mx/ip/Sleeping-Celsius-18-C-0-F-TETON-verde-Individual/00081735401566",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "marti": {
+          "marketplace": "marti",
+          "url": "https://www.marti.mx/bolsa-de-dormir-teton-campismo-celsius--18c-multicolor-1127993120/p",
+          "status": "alert",
+          "price": 2239,
+          "originalPrice": 2799,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $2798.67 (Shopify 2099 ÷ 0.75), got $2239.00"
+          ],
+          "expectedPrice": 2798.67
+        },
+        "chedraui": {
+          "marketplace": "chedraui",
+          "url": "https://www.chedraui.com.mx/sleeping-teton-verde-celsius-18-grados-centigrados-6020162/p",
+          "status": "alert",
+          "price": 2799,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 2798.67
+        },
+        "lamarina": {
+          "marketplace": "lamarina",
+          "url": "https://www.lamarina.com.mx/sleeping--celsius---18%C2%B0c-verde-teton-11013716/p",
+          "status": "alert",
+          "price": 2799,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 2798.67
+        }
+      }
+    },
+    {
+      "productName": "Celsius Regular 20F Sleeping Bag - Lagoon",
+      "sku": "1416LA",
+      "shopifyPrice": 1999,
+      "marketplaceUrls": {
+        "liverpool": "https://www.liverpool.com.mx/tienda/pdp/sleeping-bag-teton-celsius/99973243814",
+        "mercadolibre": "https://articulo.mercadolibre.com.mx/MLM-3609286190-sleeping-celsius-20f-7c-teton-sports-_JM",
+        "amazon": "https://www.amazon.com.mx/dp/B0CHN4N4KK",
+        "coppel": "https://www.coppel.com/pdp/bolsa-de-dormir-teton-sports-mkp-747943311",
+        "elektra": "https://www.elektra.mx/sleeping-celsius-6c-teton-azul-1300350490/p",
+        "walmart": "https://www.walmart.com.mx/ip/Sleeping-Celsius-7-C-20-F-TETON-azul/00081735401574",
+        "marti": "https://www.marti.mx/bolsa-de-dormir-campismo-teton-celsius-az--7c-10132s-1127976091/p",
+        "chedraui": "https://www.chedraui.com.mx/sleeping-teton-azul-celsius-7-grados-centigrados-6020155/p",
+        "lamarina": "https://www.lamarina.com.mx/sleeping--celsius---7%C2%B0c-azul-teton-11013720/p"
+      },
+      "marketplaces": {
+        "liverpool": {
+          "marketplace": "liverpool",
+          "url": "https://www.liverpool.com.mx/tienda/pdp/sleeping-bag-teton-celsius/99973243814",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "mercadolibre": {
+          "marketplace": "mercadolibre",
+          "url": "https://articulo.mercadolibre.com.mx/MLM-3609286190-sleeping-celsius-20f-7c-teton-sports-_JM",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "amazon": {
+          "marketplace": "amazon",
+          "url": "https://www.amazon.com.mx/dp/B0CHN4N4KK",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "coppel": {
+          "marketplace": "coppel",
+          "url": "https://www.coppel.com/pdp/bolsa-de-dormir-teton-sports-mkp-747943311",
+          "status": "alert",
+          "price": 2129,
+          "originalPrice": 2664,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $2665.33 (Shopify 1999 ÷ 0.75), got $2129.00"
+          ],
+          "expectedPrice": 2665.33
+        },
+        "elektra": {
+          "marketplace": "elektra",
+          "url": "https://www.elektra.mx/sleeping-celsius-6c-teton-azul-1300350490/p",
+          "status": "alert",
+          "price": 2265,
+          "originalPrice": 2665,
+          "discount": 15,
+          "errors": [
+            "Price mismatch: expected $2665.33 (Shopify 1999 ÷ 0.75), got $2265.00"
+          ],
+          "expectedPrice": 2665.33
+        },
+        "walmart": {
+          "marketplace": "walmart",
+          "url": "https://www.walmart.com.mx/ip/Sleeping-Celsius-7-C-20-F-TETON-azul/00081735401574",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "marti": {
+          "marketplace": "marti",
+          "url": "https://www.marti.mx/bolsa-de-dormir-campismo-teton-celsius-az--7c-10132s-1127976091/p",
+          "status": "alert",
+          "price": 2132,
+          "originalPrice": 2665,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $2665.33 (Shopify 1999 ÷ 0.75), got $2132.00"
+          ],
+          "expectedPrice": 2665.33
+        },
+        "chedraui": {
+          "marketplace": "chedraui",
+          "url": "https://www.chedraui.com.mx/sleeping-teton-azul-celsius-7-grados-centigrados-6020155/p",
+          "status": "alert",
+          "price": 2665,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 2665.33
+        },
+        "lamarina": {
+          "marketplace": "lamarina",
+          "url": "https://www.lamarina.com.mx/sleeping--celsius---7%C2%B0c-azul-teton-11013720/p",
+          "status": "alert",
+          "price": 2665,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 2665.33
+        }
+      }
+    },
+    {
+      "productName": "Celsius Lil 20F Sleeping Bag - Ocean/Grey",
+      "sku": "1415CN",
+      "shopifyPrice": 1499,
+      "marketplaceUrls": {
+        "liverpool": "https://www.liverpool.com.mx/tienda/pdp/sleeping-bag-teton-lil-celsius-6%C2%B0c-unisex/1158772015",
+        "mercadolibre": "https://www.mercadolibre.com.mx/sleeping-lil-celsius-20f-7c-170m-teton-sports/up/MLMU3370016630",
+        "amazon": "https://www.amazon.com.mx/dp/B0CHN66KF4",
+        "coppel": "https://www.coppel.com/pdp/bolsa-de-dormir-lil-celsius-7c-170m-azul-teton-mkp-85331088",
+        "elektra": "https://www.elektra.mx/sleeping-para-ninos-lil-celsius--7%C2%B0c-170m-teton-1300513863/p",
+        "walmart": "https://www.walmart.com.mx/ip/Sleeping-Para-Ninos-Lil-Celsius-7-C-20-F-TETON-azul-Ninos/00081735401579",
+        "marti": "https://www.marti.mx/bolsa-de-dormir-campismo-teton-lil-celsius--7c-az-infantil-unisex-10151s-1127976062/p",
+        "chedraui": "https://www.chedraui.com.mx/sleeping-para-ninos-teton-azul-lil-celsius-7-grados-6020082/p",
+        "lamarina": "https://www.lamarina.com.mx/sleeping-para-ni%C3%B1os--lil-celsius---7%C2%B0c--20%C2%B0f--teton-11013718/p"
+      },
+      "marketplaces": {
+        "liverpool": {
+          "marketplace": "liverpool",
+          "url": "https://www.liverpool.com.mx/tienda/pdp/sleeping-bag-teton-lil-celsius-6%C2%B0c-unisex/1158772015",
+          "status": "alert",
+          "price": 1599,
+          "originalPrice": 1998,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $1998.67 (Shopify 1499 ÷ 0.75), got $1599.00"
+          ],
+          "expectedPrice": 1998.67
+        },
+        "mercadolibre": {
+          "marketplace": "mercadolibre",
+          "url": "https://www.mercadolibre.com.mx/sleeping-lil-celsius-20f-7c-170m-teton-sports/up/MLMU3370016630",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "amazon": {
+          "marketplace": "amazon",
+          "url": "https://www.amazon.com.mx/dp/B0CHN66KF4",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "coppel": {
+          "marketplace": "coppel",
+          "url": "https://www.coppel.com/pdp/bolsa-de-dormir-lil-celsius-7c-170m-azul-teton-mkp-85331088",
+          "status": "alert",
+          "price": 1599,
+          "originalPrice": 1998,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $1998.67 (Shopify 1499 ÷ 0.75), got $1599.00"
+          ],
+          "expectedPrice": 1998.67
+        },
+        "elektra": {
+          "marketplace": "elektra",
+          "url": "https://www.elektra.mx/sleeping-para-ninos-lil-celsius--7%C2%B0c-170m-teton-1300513863/p",
+          "status": "alert",
+          "price": 1699,
+          "originalPrice": 1999,
+          "discount": 15,
+          "errors": [
+            "Price mismatch: expected $1998.67 (Shopify 1499 ÷ 0.75), got $1699.00"
+          ],
+          "expectedPrice": 1998.67
+        },
+        "walmart": {
+          "marketplace": "walmart",
+          "url": "https://www.walmart.com.mx/ip/Sleeping-Para-Ninos-Lil-Celsius-7-C-20-F-TETON-azul-Ninos/00081735401579",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "marti": {
+          "marketplace": "marti",
+          "url": "https://www.marti.mx/bolsa-de-dormir-campismo-teton-lil-celsius--7c-az-infantil-unisex-10151s-1127976062/p",
+          "status": "alert",
+          "price": 1599,
+          "originalPrice": 1999,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $1998.67 (Shopify 1499 ÷ 0.75), got $1599.00"
+          ],
+          "expectedPrice": 1998.67
+        },
+        "chedraui": {
+          "marketplace": "chedraui",
+          "url": "https://www.chedraui.com.mx/sleeping-para-ninos-teton-azul-lil-celsius-7-grados-6020082/p",
+          "status": "alert",
+          "price": 1999,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 1998.67
+        },
+        "lamarina": {
+          "marketplace": "lamarina",
+          "url": "https://www.lamarina.com.mx/sleeping-para-ni%C3%B1os--lil-celsius---7%C2%B0c--20%C2%B0f--teton-11013718/p",
+          "status": "alert",
+          "price": 1999,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 1998.67
+        }
+      }
+    },
+    {
+      "productName": "Regular Camp Pillow - Blue",
+      "sku": "6000BL",
+      "shopifyPrice": 399,
+      "marketplaceUrls": {
+        "liverpool": "https://www.liverpool.com.mx/tienda/pdp/almohada-para-viaje-teton/99977503421",
+        "mercadolibre": "https://articulo.mercadolibre.com.mx/MLM-2267337025-almohada-de-viaje-outdoors-suave-ligera-teton-camping-_JM?attributes=COLOR_SECONDARY_COLOR%3AQmx1ZSAmIEJsYWNr&picker=true&quantity=1",
+        "amazon": "https://www.amazon.com.mx/dp/B0CNQFCDB7",
+        "coppel": "https://www.coppel.com/pdp/almohada-de-viaje-azul-mkp-76261591",
+        "elektra": "https://www.elektra.mx/almohada-de-viaje-azul-teton-1300465243/p",
+        "walmart": "https://www.walmart.com.mx/ip/Mini-Almohada-de-Viaje-TETON-azul/00081735401635",
+        "marti": "https://www.marti.mx/almohada-de-viaje-teton-campismo-az-40000-1127976129/p",
+        "chedraui": "https://www.chedraui.com.mx/almohada-de-viaje-teton-azul-6020107/p",
+        "lamarina": "https://www.lamarina.com.mx/mini-almohada-de-viaje-teton-11013722/p"
+      },
+      "marketplaces": {
+        "liverpool": {
+          "marketplace": "liverpool",
+          "url": "https://www.liverpool.com.mx/tienda/pdp/almohada-para-viaje-teton/99977503421",
+          "status": "alert",
+          "price": 426,
+          "originalPrice": 531,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $532.00 (Shopify 399 ÷ 0.75), got $426.00"
+          ],
+          "expectedPrice": 532
+        },
+        "mercadolibre": {
+          "marketplace": "mercadolibre",
+          "url": "https://articulo.mercadolibre.com.mx/MLM-2267337025-almohada-de-viaje-outdoors-suave-ligera-teton-camping-_JM?attributes=COLOR_SECONDARY_COLOR%3AQmx1ZSAmIEJsYWNr&picker=true&quantity=1",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "amazon": {
+          "marketplace": "amazon",
+          "url": "https://www.amazon.com.mx/dp/B0CNQFCDB7",
+          "status": "alert",
+          "price": 478.8,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "Seller \"ESTACA OUTDOORS\" not found on page",
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 469.41
+        },
+        "coppel": {
+          "marketplace": "coppel",
+          "url": "https://www.coppel.com/pdp/almohada-de-viaje-azul-mkp-76261591",
+          "status": "alert",
+          "price": 426,
+          "originalPrice": 531,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $532.00 (Shopify 399 ÷ 0.75), got $426.00"
+          ],
+          "expectedPrice": 532
+        },
+        "elektra": {
+          "marketplace": "elektra",
+          "url": "https://www.elektra.mx/almohada-de-viaje-azul-teton-1300465243/p",
+          "status": "alert",
+          "price": 452,
+          "originalPrice": 532,
+          "discount": 15,
+          "errors": [
+            "Price mismatch: expected $532.00 (Shopify 399 ÷ 0.75), got $452.00"
+          ],
+          "expectedPrice": 532
+        },
+        "walmart": {
+          "marketplace": "walmart",
+          "url": "https://www.walmart.com.mx/ip/Mini-Almohada-de-Viaje-TETON-azul/00081735401635",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "marti": {
+          "marketplace": "marti",
+          "url": "https://www.marti.mx/almohada-de-viaje-teton-campismo-az-40000-1127976129/p",
+          "status": "alert",
+          "price": 532,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 532
+        },
+        "chedraui": {
+          "marketplace": "chedraui",
+          "url": "https://www.chedraui.com.mx/almohada-de-viaje-teton-azul-6020107/p",
+          "status": "alert",
+          "price": 532,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 532
+        },
+        "lamarina": {
+          "marketplace": "lamarina",
+          "url": "https://www.lamarina.com.mx/mini-almohada-de-viaje-teton-11013722/p",
+          "status": "alert",
+          "price": 532,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 532
+        }
+      }
+    },
+    {
+      "productName": "Regular Camp Pillow - Fox",
+      "sku": "6000FX",
+      "shopifyPrice": 399,
+      "marketplaceUrls": {
+        "liverpool": "https://www.liverpool.com.mx/tienda/pdp/almohada-para-viaje-teton/99977503421",
+        "mercadolibre": "https://articulo.mercadolibre.com.mx/MLM-2267337025-almohada-de-viaje-outdoors-suave-ligera-teton-camping-_JM?attributes=COLOR_SECONDARY_COLOR%3ARm94ICYgQmxhY2s%3D&quantity=1&picker=true",
+        "amazon": "http://amazon.com.mx/dp/B0CNQG2PY8",
+        "coppel": "https://www.coppel.com/pdp/almohada-de-viaje-roja-mkp-76261592",
+        "elektra": "https://www.elektra.mx/almohada-de-viaje-roja-teton-1300465249/p",
+        "walmart": "https://www.walmart.com.mx/ip/Mini-Almohada-de-Viaje-TETON-rojo/00081735401637",
+        "marti": "https://www.marti.mx/almohada-de-viaje-teton-campismo-rj-40002-1127976130/p",
+        "chedraui": "https://www.chedraui.com.mx/almohada-de-viaje-teton-roja-6020131/p",
+        "lamarina": "https://www.lamarina.com.mx/mini-almohada-de-viaje-teton-11013717/p"
+      },
+      "marketplaces": {
+        "liverpool": {
+          "marketplace": "liverpool",
+          "url": "https://www.liverpool.com.mx/tienda/pdp/almohada-para-viaje-teton/99977503421",
+          "status": "alert",
+          "price": 426,
+          "originalPrice": 531,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $532.00 (Shopify 399 ÷ 0.75), got $426.00"
+          ],
+          "expectedPrice": 532
+        },
+        "mercadolibre": {
+          "marketplace": "mercadolibre",
+          "url": "https://articulo.mercadolibre.com.mx/MLM-2267337025-almohada-de-viaje-outdoors-suave-ligera-teton-camping-_JM?attributes=COLOR_SECONDARY_COLOR%3ARm94ICYgQmxhY2s%3D&quantity=1&picker=true",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "amazon": {
+          "marketplace": "amazon",
+          "url": "http://amazon.com.mx/dp/B0CNQG2PY8",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "coppel": {
+          "marketplace": "coppel",
+          "url": "https://www.coppel.com/pdp/almohada-de-viaje-roja-mkp-76261592",
+          "status": "alert",
+          "price": 426,
+          "originalPrice": 531,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $532.00 (Shopify 399 ÷ 0.75), got $426.00"
+          ],
+          "expectedPrice": 532
+        },
+        "elektra": {
+          "marketplace": "elektra",
+          "url": "https://www.elektra.mx/almohada-de-viaje-roja-teton-1300465249/p",
+          "status": "alert",
+          "price": 452,
+          "originalPrice": 532,
+          "discount": 15,
+          "errors": [
+            "Price mismatch: expected $532.00 (Shopify 399 ÷ 0.75), got $452.00"
+          ],
+          "expectedPrice": 532
+        },
+        "walmart": {
+          "marketplace": "walmart",
+          "url": "https://www.walmart.com.mx/ip/Mini-Almohada-de-Viaje-TETON-rojo/00081735401637",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "marti": {
+          "marketplace": "marti",
+          "url": "https://www.marti.mx/almohada-de-viaje-teton-campismo-rj-40002-1127976130/p",
+          "status": "alert",
+          "price": 532,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 532
+        },
+        "chedraui": {
+          "marketplace": "chedraui",
+          "url": "https://www.chedraui.com.mx/almohada-de-viaje-teton-roja-6020131/p",
+          "status": "alert",
+          "price": 532,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 532
+        },
+        "lamarina": {
+          "marketplace": "lamarina",
+          "url": "https://www.lamarina.com.mx/mini-almohada-de-viaje-teton-11013717/p",
+          "status": "alert",
+          "price": 532,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 532
+        }
+      }
+    },
+    {
+      "productName": "LEEF Regular 0F Sleeping Bag - Black/Sage",
+      "sku": "1501BK",
+      "shopifyPrice": 2199,
+      "marketplaceUrls": {
+        "liverpool": "https://www.liverpool.com.mx/tienda/pdp/sleeping-bag-teton-regular-unisex/99973221366",
+        "mercadolibre": "https://articulo.mercadolibre.com.mx/MLM-2267340297-sleeping-tipo-momia-leef-0f-18c-grande-205m-teton-sp-_JM",
+        "amazon": "https://www.amazon.com.mx/dp/B09LMNHNZQ",
+        "coppel": "https://www.coppel.com/pdp/sleeping-tipo-momia-leef-17c-grande-negro-mkp-85331030",
+        "elektra": "https://www.elektra.mx/sleeping-tipo-momia-leef--17%C2%B0c-grande-negro-teton-1300350520/p",
+        "walmart": "https://www.walmart.com.mx/ip/Sleeping-Tipo-Momia-LEEF-Regular-0-F-17-C-Teton-Sports-Negro/00081735401506",
+        "marti": "https://www.marti.mx/bolsa-de-dormir-tipo-momia-campismo-teton-leef-2-05m-ng--18c-2205lsblsg-1127976038/p",
+        "chedraui": "https://www.chedraui.com.mx/sleeping-tipo-momia-teton-negro-leef-18-grados-205m-6020138/p",
+        "lamarina": "https://www.lamarina.com.mx/sleeping-tipo-momia-leef--18%C2%B0c-alta-monta%C3%B1a-teton-11013719/p"
+      },
+      "marketplaces": {
+        "liverpool": {
+          "marketplace": "liverpool",
+          "url": "https://www.liverpool.com.mx/tienda/pdp/sleeping-bag-teton-regular-unisex/99973221366",
+          "status": "alert",
+          "price": 2319,
+          "originalPrice": 2931,
+          "discount": 21,
+          "errors": [
+            "Price mismatch: expected $2932.00 (Shopify 2199 ÷ 0.75), got $2319.00"
+          ],
+          "expectedPrice": 2932
+        },
+        "mercadolibre": {
+          "marketplace": "mercadolibre",
+          "url": "https://articulo.mercadolibre.com.mx/MLM-2267340297-sleeping-tipo-momia-leef-0f-18c-grande-205m-teton-sp-_JM",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "amazon": {
+          "marketplace": "amazon",
+          "url": "https://www.amazon.com.mx/dp/B09LMNHNZQ",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "coppel": {
+          "marketplace": "coppel",
+          "url": "https://www.coppel.com/pdp/sleeping-tipo-momia-leef-17c-grande-negro-mkp-85331030",
+          "status": "alert",
+          "price": 2319,
+          "originalPrice": 2931,
+          "discount": 21,
+          "errors": [
+            "Price mismatch: expected $2932.00 (Shopify 2199 ÷ 0.75), got $2319.00"
+          ],
+          "expectedPrice": 2932
+        },
+        "elektra": {
+          "marketplace": "elektra",
+          "url": "https://www.elektra.mx/sleeping-tipo-momia-leef--17%C2%B0c-grande-negro-teton-1300350520/p",
+          "status": "alert",
+          "price": 2464,
+          "originalPrice": 2899,
+          "discount": 15,
+          "errors": [
+            "Price mismatch: expected $2932.00 (Shopify 2199 ÷ 0.75), got $2464.00"
+          ],
+          "expectedPrice": 2932
+        },
+        "walmart": {
+          "marketplace": "walmart",
+          "url": "https://www.walmart.com.mx/ip/Sleeping-Tipo-Momia-LEEF-Regular-0-F-17-C-Teton-Sports-Negro/00081735401506",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "marti": {
+          "marketplace": "marti",
+          "url": "https://www.marti.mx/bolsa-de-dormir-tipo-momia-campismo-teton-leef-2-05m-ng--18c-2205lsblsg-1127976038/p",
+          "status": "alert",
+          "price": 2319,
+          "originalPrice": 2899,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $2932.00 (Shopify 2199 ÷ 0.75), got $2319.00"
+          ],
+          "expectedPrice": 2932
+        },
+        "chedraui": {
+          "marketplace": "chedraui",
+          "url": "https://www.chedraui.com.mx/sleeping-tipo-momia-teton-negro-leef-18-grados-205m-6020138/p",
+          "status": "alert",
+          "price": 2899,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 2932
+        },
+        "lamarina": {
+          "marketplace": "lamarina",
+          "url": "https://www.lamarina.com.mx/sleeping-tipo-momia-leef--18%C2%B0c-alta-monta%C3%B1a-teton-11013719/p",
+          "status": "alert",
+          "price": 2899,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 2932
+        }
+      }
+    },
+    {
+      "productName": "LEEF Regular 20F Sleeping Bag - Moss/Sky",
+      "sku": "1504MS",
+      "shopifyPrice": 1999,
+      "marketplaceUrls": {
+        "liverpool": "https://www.liverpool.com.mx/tienda/pdp/sleeping-bag-teton-unisex/99973221283",
+        "mercadolibre": "https://articulo.mercadolibre.com.mx/MLM-3609274818-sleeping-tipo-momia-leef-20f-7c-grande-205m-teton-sp-_JM",
+        "amazon": "https://www.amazon.com.mx/dp/B09LMNT52L?th=1",
+        "coppel": "https://www.coppel.com/pdp/saco-de-dormir-teton-sports-tipo-momia-mkp-747943310",
+        "elektra": "https://www.elektra.mx/sleeping-leef--7%C2%B0c-verde-grande-205m-teton--1300465326/p",
+        "walmart": "https://www.walmart.com.mx/ip/Saco-de-Dormir-Tipo-Momia-Teton-Sports-LEEF-Regular-20-F-6-C-Verde/00081735401509",
+        "marti": "https://www.marti.mx/bolsa-de-dormir-tipo-momia-campismo-teton-leef-2-05m-vrd--7c-2208lsmosk-1127976060/p",
+        "chedraui": "https://www.chedraui.com.mx/sleeping-tipo-momia-teton-verde-leef-7-grados-205m-6020132/p",
+        "lamarina": "https://www.lamarina.com.mx/sleeping-tipo-momia-leef--7%C2%B0c-teton-11013726/p"
+      },
+      "marketplaces": {
+        "liverpool": {
+          "marketplace": "liverpool",
+          "url": "https://www.liverpool.com.mx/tienda/pdp/sleeping-bag-teton-unisex/99973221283",
+          "status": "alert",
+          "price": 2129,
+          "originalPrice": 2664,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $2665.33 (Shopify 1999 ÷ 0.75), got $2129.00"
+          ],
+          "expectedPrice": 2665.33
+        },
+        "mercadolibre": {
+          "marketplace": "mercadolibre",
+          "url": "https://articulo.mercadolibre.com.mx/MLM-3609274818-sleeping-tipo-momia-leef-20f-7c-grande-205m-teton-sp-_JM",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "amazon": {
+          "marketplace": "amazon",
+          "url": "https://www.amazon.com.mx/dp/B09LMNT52L?th=1",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "coppel": {
+          "marketplace": "coppel",
+          "url": "https://www.coppel.com/pdp/saco-de-dormir-teton-sports-tipo-momia-mkp-747943310",
+          "status": "alert",
+          "price": 2129,
+          "originalPrice": 2664,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $2665.33 (Shopify 1999 ÷ 0.75), got $2129.00"
+          ],
+          "expectedPrice": 2665.33
+        },
+        "elektra": {
+          "marketplace": "elektra",
+          "url": "https://www.elektra.mx/sleeping-leef--7%C2%B0c-verde-grande-205m-teton--1300465326/p",
+          "status": "alert",
+          "price": 2265,
+          "originalPrice": 2665,
+          "discount": 15,
+          "errors": [
+            "Price mismatch: expected $2665.33 (Shopify 1999 ÷ 0.75), got $2265.00"
+          ],
+          "expectedPrice": 2665.33
+        },
+        "walmart": {
+          "marketplace": "walmart",
+          "url": "https://www.walmart.com.mx/ip/Saco-de-Dormir-Tipo-Momia-Teton-Sports-LEEF-Regular-20-F-6-C-Verde/00081735401509",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "marti": {
+          "marketplace": "marti",
+          "url": "https://www.marti.mx/bolsa-de-dormir-tipo-momia-campismo-teton-leef-2-05m-vrd--7c-2208lsmosk-1127976060/p",
+          "status": "alert",
+          "price": 2132,
+          "originalPrice": 2665,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $2665.33 (Shopify 1999 ÷ 0.75), got $2132.00"
+          ],
+          "expectedPrice": 2665.33
+        },
+        "chedraui": {
+          "marketplace": "chedraui",
+          "url": "https://www.chedraui.com.mx/sleeping-tipo-momia-teton-verde-leef-7-grados-205m-6020132/p",
+          "status": "alert",
+          "price": 2665,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 2665.33
+        },
+        "lamarina": {
+          "marketplace": "lamarina",
+          "url": "https://www.lamarina.com.mx/sleeping-tipo-momia-leef--7%C2%B0c-teton-11013726/p",
+          "status": "alert",
+          "price": 2665,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 2665.33
+        }
+      }
+    },
+    {
+      "productName": "Evergreen Regular 20F Left Zip Sleeping Bag",
+      "sku": "1207NO",
+      "shopifyPrice": 1699,
+      "marketplaceUrls": {
+        "liverpool": "https://www.liverpool.com.mx/tienda/pdp/sleeping-bag-teton-evergreen-unisex/1158526928",
+        "mercadolibre": "https://www.mercadolibre.com.mx/sleeping--evergreen--20f-7c-teton-sports/up/MLMU3087514625",
+        "amazon": "https://www.amazon.com.mx/dp/B09LMNVKPT",
+        "coppel": "https://www.coppel.com/pdp/sleeping-evergreen-6c-amarillo-/-negro-teton-mkp-85331034",
+        "elektra": "https://www.elektra.mx/sleeping-evergreen-6c-teton-negro-1300350461/p",
+        "walmart": "https://www.walmart.com.mx/ip/Sleeping-Evergreen-7-C-20-F-TETON-negro/00081735401530",
+        "marti": "https://www.marti.mx/bolsa-de-dormir-teton-campismo-evergreen-7c-negro-1127993114/p",
+        "chedraui": "https://www.chedraui.com.mx/sleeping-teton-negro-evergreen-7-grados-6020170/p",
+        "lamarina": "https://www.lamarina.com.mx/sleeping-tipo-momia-leef--7%C2%B0c-teton-11013726/p"
+      },
+      "marketplaces": {
+        "liverpool": {
+          "marketplace": "liverpool",
+          "url": "https://www.liverpool.com.mx/tienda/pdp/sleeping-bag-teton-evergreen-unisex/1158526928",
+          "status": "alert",
+          "price": 1819,
+          "originalPrice": 2264,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $2265.33 (Shopify 1699 ÷ 0.75), got $1819.00"
+          ],
+          "expectedPrice": 2265.33
+        },
+        "mercadolibre": {
+          "marketplace": "mercadolibre",
+          "url": "https://www.mercadolibre.com.mx/sleeping--evergreen--20f-7c-teton-sports/up/MLMU3087514625",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "amazon": {
+          "marketplace": "amazon",
+          "url": "https://www.amazon.com.mx/dp/B09LMNVKPT",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "coppel": {
+          "marketplace": "coppel",
+          "url": "https://www.coppel.com/pdp/sleeping-evergreen-6c-amarillo-/-negro-teton-mkp-85331034",
+          "status": "alert",
+          "price": 1819,
+          "originalPrice": 2264,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $2265.33 (Shopify 1699 ÷ 0.75), got $1819.00"
+          ],
+          "expectedPrice": 2265.33
+        },
+        "elektra": {
+          "marketplace": "elektra",
+          "url": "https://www.elektra.mx/sleeping-evergreen-6c-teton-negro-1300350461/p",
+          "status": "alert",
+          "price": 1925,
+          "originalPrice": 2265,
+          "discount": 15,
+          "errors": [
+            "Price mismatch: expected $2265.33 (Shopify 1699 ÷ 0.75), got $1925.00"
+          ],
+          "expectedPrice": 2265.33
+        },
+        "walmart": {
+          "marketplace": "walmart",
+          "url": "https://www.walmart.com.mx/ip/Sleeping-Evergreen-7-C-20-F-TETON-negro/00081735401530",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "marti": {
+          "marketplace": "marti",
+          "url": "https://www.marti.mx/bolsa-de-dormir-teton-campismo-evergreen-7c-negro-1127993114/p",
+          "status": "alert",
+          "price": 1812,
+          "originalPrice": 2265,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $2265.33 (Shopify 1699 ÷ 0.75), got $1812.00"
+          ],
+          "expectedPrice": 2265.33
+        },
+        "chedraui": {
+          "marketplace": "chedraui",
+          "url": "https://www.chedraui.com.mx/sleeping-teton-negro-evergreen-7-grados-6020170/p",
+          "status": "alert",
+          "price": 2265,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 2265.33
+        },
+        "lamarina": {
+          "marketplace": "lamarina",
+          "url": "https://www.lamarina.com.mx/sleeping-tipo-momia-leef--7%C2%B0c-teton-11013726/p",
+          "status": "alert",
+          "price": 2665,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "Price mismatch: expected $2265.33 (Shopify 1699 ÷ 0.75), got $2665.00",
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 2265.33
+        }
+      }
+    },
+    {
+      "productName": "LEEF Mummy Long 30F Sleeping Bag",
+      "sku": "1509BK",
+      "shopifyPrice": 1799,
+      "marketplaceUrls": {
+        "liverpool": "https://www.liverpool.com.mx/tienda/pdp/sleeping-bag-teton-largo-unisex/99973221175",
+        "mercadolibre": "https://www.mercadolibre.com.mx/sleeping-tipo-momia-leef-30f-1c-teton-sports/up/MLMU3717083430",
+        "amazon": "https://www.amazon.com.mx/dp/B09LMNNGYR",
+        "coppel": "https://www.coppel.com/pdp/sleeping-tipo-momia-leef-1c-teton-extra-grande-negro-mkp-85341091",
+        "elektra": "https://www.elektra.mx/sleeping-leef--1%C2%B0c-extra-grande-220m-negro-teton-1300465448/p",
+        "walmart": "https://www.walmart.com.mx/ip/Sleeping-Tipo-Momia-LEEF-1-C-30-F-TETON-negro/00081735401515",
+        "marti": "https://www.marti.mx/bolsa-de-dormir-tipo-momia-campismo-teton-leef-2-20m-ng--1c-2212lsblsg-1127976099/p",
+        "lamarina": "https://www.lamarina.com.mx/sleeping-tipo-momia-leef--1%C2%B0c-teton-11013754/p"
+      },
+      "marketplaces": {
+        "liverpool": {
+          "marketplace": "liverpool",
+          "url": "https://www.liverpool.com.mx/tienda/pdp/sleeping-bag-teton-largo-unisex/99973221175",
+          "status": "alert",
+          "price": 1919,
+          "originalPrice": 2398,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $2398.67 (Shopify 1799 ÷ 0.75), got $1919.00"
+          ],
+          "expectedPrice": 2398.67
+        },
+        "mercadolibre": {
+          "marketplace": "mercadolibre",
+          "url": "https://www.mercadolibre.com.mx/sleeping-tipo-momia-leef-30f-1c-teton-sports/up/MLMU3717083430",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "amazon": {
+          "marketplace": "amazon",
+          "url": "https://www.amazon.com.mx/dp/B09LMNNGYR",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "coppel": {
+          "marketplace": "coppel",
+          "url": "https://www.coppel.com/pdp/sleeping-tipo-momia-leef-1c-teton-extra-grande-negro-mkp-85341091",
+          "status": "alert",
+          "price": 1919,
+          "originalPrice": 2398,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $2398.67 (Shopify 1799 ÷ 0.75), got $1919.00"
+          ],
+          "expectedPrice": 2398.67
+        },
+        "elektra": {
+          "marketplace": "elektra",
+          "url": "https://www.elektra.mx/sleeping-leef--1%C2%B0c-extra-grande-220m-negro-teton-1300465448/p",
+          "status": "alert",
+          "price": 2039,
+          "originalPrice": 2399,
+          "discount": 15,
+          "errors": [
+            "Price mismatch: expected $2398.67 (Shopify 1799 ÷ 0.75), got $2039.00"
+          ],
+          "expectedPrice": 2398.67
+        },
+        "walmart": {
+          "marketplace": "walmart",
+          "url": "https://www.walmart.com.mx/ip/Sleeping-Tipo-Momia-LEEF-1-C-30-F-TETON-negro/00081735401515",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "marti": {
+          "marketplace": "marti",
+          "url": "https://www.marti.mx/bolsa-de-dormir-tipo-momia-campismo-teton-leef-2-20m-ng--1c-2212lsblsg-1127976099/p",
+          "status": "alert",
+          "price": 1919,
+          "originalPrice": 2399,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $2398.67 (Shopify 1799 ÷ 0.75), got $1919.00"
+          ],
+          "expectedPrice": 2398.67
+        },
+        "lamarina": {
+          "marketplace": "lamarina",
+          "url": "https://www.lamarina.com.mx/sleeping-tipo-momia-leef--1%C2%B0c-teton-11013754/p",
+          "status": "alert",
+          "price": 2399,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 2398.67
+        }
+      }
+    },
+    {
+      "productName": "Evergreen Regular 0F Left Zip Sleeping Bag",
+      "sku": "1206LV",
+      "shopifyPrice": 1899,
+      "marketplaceUrls": {
+        "liverpool": "https://www.liverpool.com.mx/tienda/pdp/sleeping-bag-teton-evergreen/99973247671",
+        "mercadolibre": "https://articulo.mercadolibre.com.mx/MLM-3609184938-sleeping-evergreen-18c-0f-para-camping-teton-sports-_JM",
+        "amazon": "http://amazon.com.mx/dp/B09LMMVRQP",
+        "coppel": "https://www.coppel.com/pdp/sleeping-evergreen-17c-verde-/-amarillo-teton-mkp-85331049",
+        "elektra": "https://www.elektra.mx/sleeping-evergreen-17c-verde-y-amarillo-teton-1300350481/p",
+        "walmart": "https://www.walmart.com.mx/ip/Sleeping-Evergreen-0-F-18-C-TETON-verde/00081735401528",
+        "marti": "https://www.marti.mx/bolsa-de-dormir-campismo-teton-evergreen-vrd-am--18c-2221lsolol-1127976053/p",
+        "chedraui": "https://www.chedraui.com.mx/sleeping-teton-amarillo--verde-evergreen-18-grados-6020169/p",
+        "lamarina": "https://www.lamarina.com.mx/sleeping--evergreen---18%C2%B0c-teton-11013721/p"
+      },
+      "marketplaces": {
+        "liverpool": {
+          "marketplace": "liverpool",
+          "url": "https://www.liverpool.com.mx/tienda/pdp/sleeping-bag-teton-evergreen/99973247671",
+          "status": "alert",
+          "price": 1999,
+          "originalPrice": 2531,
+          "discount": 21,
+          "errors": [
+            "Price mismatch: expected $2532.00 (Shopify 1899 ÷ 0.75), got $1999.00"
+          ],
+          "expectedPrice": 2532
+        },
+        "mercadolibre": {
+          "marketplace": "mercadolibre",
+          "url": "https://articulo.mercadolibre.com.mx/MLM-3609184938-sleeping-evergreen-18c-0f-para-camping-teton-sports-_JM",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "amazon": {
+          "marketplace": "amazon",
+          "url": "http://amazon.com.mx/dp/B09LMMVRQP",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "coppel": {
+          "marketplace": "coppel",
+          "url": "https://www.coppel.com/pdp/sleeping-evergreen-17c-verde-/-amarillo-teton-mkp-85331049",
+          "status": "alert",
+          "price": 1999,
+          "originalPrice": 2531,
+          "discount": 21,
+          "errors": [
+            "Price mismatch: expected $2532.00 (Shopify 1899 ÷ 0.75), got $1999.00"
+          ],
+          "expectedPrice": 2532
+        },
+        "elektra": {
+          "marketplace": "elektra",
+          "url": "https://www.elektra.mx/sleeping-evergreen-17c-verde-y-amarillo-teton-1300350481/p",
+          "status": "alert",
+          "price": 2124,
+          "originalPrice": 2499,
+          "discount": 15,
+          "errors": [
+            "Price mismatch: expected $2532.00 (Shopify 1899 ÷ 0.75), got $2124.00"
+          ],
+          "expectedPrice": 2532
+        },
+        "walmart": {
+          "marketplace": "walmart",
+          "url": "https://www.walmart.com.mx/ip/Sleeping-Evergreen-0-F-18-C-TETON-verde/00081735401528",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "marti": {
+          "marketplace": "marti",
+          "url": "https://www.marti.mx/bolsa-de-dormir-campismo-teton-evergreen-vrd-am--18c-2221lsolol-1127976053/p",
+          "status": "alert",
+          "price": 1999,
+          "originalPrice": 2499,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $2532.00 (Shopify 1899 ÷ 0.75), got $1999.00"
+          ],
+          "expectedPrice": 2532
+        },
+        "chedraui": {
+          "marketplace": "chedraui",
+          "url": "https://www.chedraui.com.mx/sleeping-teton-amarillo--verde-evergreen-18-grados-6020169/p",
+          "status": "alert",
+          "price": 2499,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 2532
+        },
+        "lamarina": {
+          "marketplace": "lamarina",
+          "url": "https://www.lamarina.com.mx/sleeping--evergreen---18%C2%B0c-teton-11013721/p",
+          "status": "alert",
+          "price": 2499,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 2532
+        }
+      }
+    },
+    {
+      "productName": "Response 10F Degree Sleeping Bag - Blue",
+      "sku": "9101BL",
+      "shopifyPrice": 1349,
+      "marketplaceUrls": {
+        "liverpool": "https://www.liverpool.com.mx/tienda/pdp/sleeping-bag-teton-response-unisex/99985575066",
+        "mercadolibre": "https://www.mercadolibre.com.mx/sleeping-response-12c-10f-teton-everyday/up/MLMU3868860218",
+        "amazon": "https://www.amazon.com.mx/dp/B0DLJ6FVRZ?th=1",
+        "coppel": "https://www.coppel.com/pdp/sleeping-tetin-everyday-azul-mkp-85331061",
+        "elektra": "https://www.elektra.mx/sleeping-response--12%C2%B0c-azul-teton-1300644103/p",
+        "walmart": "https://www.walmart.com.mx/ip/Sleeping-Response-12-C-Azul-TETON/00081735401703",
+        "marti": "https://www.marti.mx/bolsa-de-dormir-teton-campismo-response-9101bl-azul-1127993118/p",
+        "chedraui": "https://www.chedraui.com.mx/sleeping-teton-azul-response-12-grados-6020069/p",
+        "lamarina": "https://www.lamarina.com.mx/sleeping-response--12%C2%B0c-teton-11013715/p"
+      },
+      "marketplaces": {
+        "liverpool": {
+          "marketplace": "liverpool",
+          "url": "https://www.liverpool.com.mx/tienda/pdp/sleeping-bag-teton-response-unisex/99985575066",
+          "status": "alert",
+          "price": 1799,
+          "originalPrice": 1039,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 1798.67
+        },
+        "mercadolibre": {
+          "marketplace": "mercadolibre",
+          "url": "https://www.mercadolibre.com.mx/sleeping-response-12c-10f-teton-everyday/up/MLMU3868860218",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "amazon": {
+          "marketplace": "amazon",
+          "url": "https://www.amazon.com.mx/dp/B0DLJ6FVRZ?th=1",
+          "status": "alert",
+          "price": 1586,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 1587.06
+        },
+        "coppel": {
+          "marketplace": "coppel",
+          "url": "https://www.coppel.com/pdp/sleeping-tetin-everyday-azul-mkp-85331061",
+          "status": "alert",
+          "price": 1439,
+          "originalPrice": 1798,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $1798.67 (Shopify 1349 ÷ 0.75), got $1439.00"
+          ],
+          "expectedPrice": 1798.67
+        },
+        "elektra": {
+          "marketplace": "elektra",
+          "url": "https://www.elektra.mx/sleeping-response--12%C2%B0c-azul-teton-1300644103/p",
+          "status": "alert",
+          "price": 1529,
+          "originalPrice": 1799,
+          "discount": 15,
+          "errors": [
+            "Price mismatch: expected $1798.67 (Shopify 1349 ÷ 0.75), got $1529.00"
+          ],
+          "expectedPrice": 1798.67
+        },
+        "walmart": {
+          "marketplace": "walmart",
+          "url": "https://www.walmart.com.mx/ip/Sleeping-Response-12-C-Azul-TETON/00081735401703",
+          "status": "error",
+          "price": null,
+          "originalPrice": null,
+          "discount": null,
+          "errors": [
+            "Could not extract price (selector empty and no JSON-LD) — check link or selector"
+          ]
+        },
+        "marti": {
+          "marketplace": "marti",
+          "url": "https://www.marti.mx/bolsa-de-dormir-teton-campismo-response-9101bl-azul-1127993118/p",
+          "status": "alert",
+          "price": 1439,
+          "originalPrice": 1799,
+          "discount": 20,
+          "errors": [
+            "Price mismatch: expected $1798.67 (Shopify 1349 ÷ 0.75), got $1439.00"
+          ],
+          "expectedPrice": 1798.67
+        },
+        "chedraui": {
+          "marketplace": "chedraui",
+          "url": "https://www.chedraui.com.mx/sleeping-teton-azul-response-12-grados-6020069/p",
+          "status": "alert",
+          "price": 1799,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 1798.67
+        },
+        "lamarina": {
+          "marketplace": "lamarina",
+          "url": "https://www.lamarina.com.mx/sleeping-response--12%C2%B0c-teton-11013715/p",
+          "status": "alert",
+          "price": 1799,
+          "originalPrice": null,
+          "discount": 0,
+          "errors": [
+            "No discount applied (0%)"
+          ],
+          "expectedPrice": 1798.67
+        }
+      }
+    }
+  ]
+}

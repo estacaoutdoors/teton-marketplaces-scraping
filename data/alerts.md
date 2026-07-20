@@ -1,0 +1,122 @@
+# Marketplace alerts — 2026-07-20
+
+- **Altos-s 0F Degree Sleeping Bag** (1169) — Liverpool: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Altos-s 0F Degree Sleeping Bag** (1169) — MercadoLibre: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Altos-s 0F Degree Sleeping Bag** (1169) — Amazon: Seller "ESTACA OUTDOORS" not found on page; Price mismatch: expected $3175.29 (Shopify 2699 ÷ 0.85), got $2008.03
+- **Altos-s 0F Degree Sleeping Bag** (1169) — Coppel: Price mismatch: expected $3598.67 (Shopify 2699 ÷ 0.75), got $2879.00
+- **Altos-s 0F Degree Sleeping Bag** (1169) — Elektra: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Altos-s 0F Degree Sleeping Bag** (1169) — Walmart: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Altos-s 0F Degree Sleeping Bag** (1169) — Sears: Price mismatch: expected $3598.67 (Shopify 2699 ÷ 0.75), got $3059.00; No discount applied (0%)
+- **Altos-s 0F Degree Sleeping Bag** (1169) — Sanborns: Price mismatch: expected $3598.67 (Shopify 2699 ÷ 0.75), got $3059.00
+- **Altos-s 0F Degree Sleeping Bag** (1169) — Martí: Price mismatch: expected $3598.67 (Shopify 2699 ÷ 0.75), got $2879.00
+- **Altos-s 0F Degree Sleeping Bag** (1169) — Chedraui: No discount applied (0%)
+- **Altos-s 0F Degree Sleeping Bag** (1169) — La Marina: No discount applied (0%)
+- **Bridger Junior 0F Canvas Sleeping Bag** (1234PC) — Liverpool: Price mismatch: expected $2198.67 (Shopify 1649 ÷ 0.75), got $1759.00
+- **Bridger Junior 0F Canvas Sleeping Bag** (1234PC) — MercadoLibre: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Bridger Junior 0F Canvas Sleeping Bag** (1234PC) — Amazon: Seller "ESTACA OUTDOORS" not found on page; Price mismatch: expected $1940.00 (Shopify 1649 ÷ 0.85), got $1435.67; No discount applied (0%)
+- **Bridger Junior 0F Canvas Sleeping Bag** (1234PC) — Coppel: Price mismatch: expected $2198.67 (Shopify 1649 ÷ 0.75), got $1759.00
+- **Bridger Junior 0F Canvas Sleeping Bag** (1234PC) — Elektra: Price mismatch: expected $2198.67 (Shopify 1649 ÷ 0.75), got $1869.00
+- **Bridger Junior 0F Canvas Sleeping Bag** (1234PC) — Walmart: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Bridger Junior 0F Canvas Sleeping Bag** (1234PC) — Sears: Price mismatch: expected $2198.67 (Shopify 1649 ÷ 0.75), got $1869.00; No discount applied (0%)
+- **Bridger Junior 0F Canvas Sleeping Bag** (1234PC) — Sanborns: Price mismatch: expected $2198.67 (Shopify 1649 ÷ 0.75), got $1869.00
+- **Bridger Junior 0F Canvas Sleeping Bag** (1234PC) — Martí: Price mismatch: expected $2198.67 (Shopify 1649 ÷ 0.75), got $1759.00
+- **Bridger Junior 0F Canvas Sleeping Bag** (1234PC) — Chedraui: No discount applied (0%)
+- **Bridger Junior 0F Canvas Sleeping Bag** (1234PC) — La Marina: No discount applied (0%)
+- **Celsius Regular 0F Sleeping Bag - Ivy/Grey** (1406VY) — Liverpool: Price mismatch: expected $2798.67 (Shopify 2099 ÷ 0.75), got $2239.00
+- **Celsius Regular 0F Sleeping Bag - Ivy/Grey** (1406VY) — MercadoLibre: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Celsius Regular 0F Sleeping Bag - Ivy/Grey** (1406VY) — Amazon: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Celsius Regular 0F Sleeping Bag - Ivy/Grey** (1406VY) — Coppel: Price mismatch: expected $2798.67 (Shopify 2099 ÷ 0.75), got $2239.00
+- **Celsius Regular 0F Sleeping Bag - Ivy/Grey** (1406VY) — Elektra: Price mismatch: expected $2798.67 (Shopify 2099 ÷ 0.75), got $2379.00
+- **Celsius Regular 0F Sleeping Bag - Ivy/Grey** (1406VY) — Walmart: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Celsius Regular 0F Sleeping Bag - Ivy/Grey** (1406VY) — Martí: Price mismatch: expected $2798.67 (Shopify 2099 ÷ 0.75), got $2239.00
+- **Celsius Regular 0F Sleeping Bag - Ivy/Grey** (1406VY) — Chedraui: No discount applied (0%)
+- **Celsius Regular 0F Sleeping Bag - Ivy/Grey** (1406VY) — La Marina: No discount applied (0%)
+- **Celsius Regular 20F Sleeping Bag - Lagoon** (1416LA) — Liverpool: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Celsius Regular 20F Sleeping Bag - Lagoon** (1416LA) — MercadoLibre: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Celsius Regular 20F Sleeping Bag - Lagoon** (1416LA) — Amazon: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Celsius Regular 20F Sleeping Bag - Lagoon** (1416LA) — Coppel: Price mismatch: expected $2665.33 (Shopify 1999 ÷ 0.75), got $2129.00
+- **Celsius Regular 20F Sleeping Bag - Lagoon** (1416LA) — Elektra: Price mismatch: expected $2665.33 (Shopify 1999 ÷ 0.75), got $2265.00
+- **Celsius Regular 20F Sleeping Bag - Lagoon** (1416LA) — Walmart: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Celsius Regular 20F Sleeping Bag - Lagoon** (1416LA) — Martí: Price mismatch: expected $2665.33 (Shopify 1999 ÷ 0.75), got $2132.00
+- **Celsius Regular 20F Sleeping Bag - Lagoon** (1416LA) — Chedraui: No discount applied (0%)
+- **Celsius Regular 20F Sleeping Bag - Lagoon** (1416LA) — La Marina: No discount applied (0%)
+- **Celsius Lil 20F Sleeping Bag - Ocean/Grey** (1415CN) — Liverpool: Price mismatch: expected $1998.67 (Shopify 1499 ÷ 0.75), got $1599.00
+- **Celsius Lil 20F Sleeping Bag - Ocean/Grey** (1415CN) — MercadoLibre: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Celsius Lil 20F Sleeping Bag - Ocean/Grey** (1415CN) — Amazon: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Celsius Lil 20F Sleeping Bag - Ocean/Grey** (1415CN) — Coppel: Price mismatch: expected $1998.67 (Shopify 1499 ÷ 0.75), got $1599.00
+- **Celsius Lil 20F Sleeping Bag - Ocean/Grey** (1415CN) — Elektra: Price mismatch: expected $1998.67 (Shopify 1499 ÷ 0.75), got $1699.00
+- **Celsius Lil 20F Sleeping Bag - Ocean/Grey** (1415CN) — Walmart: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Celsius Lil 20F Sleeping Bag - Ocean/Grey** (1415CN) — Martí: Price mismatch: expected $1998.67 (Shopify 1499 ÷ 0.75), got $1599.00
+- **Celsius Lil 20F Sleeping Bag - Ocean/Grey** (1415CN) — Chedraui: No discount applied (0%)
+- **Celsius Lil 20F Sleeping Bag - Ocean/Grey** (1415CN) — La Marina: No discount applied (0%)
+- **Regular Camp Pillow - Blue** (6000BL) — Liverpool: Price mismatch: expected $532.00 (Shopify 399 ÷ 0.75), got $426.00
+- **Regular Camp Pillow - Blue** (6000BL) — MercadoLibre: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Regular Camp Pillow - Blue** (6000BL) — Amazon: Seller "ESTACA OUTDOORS" not found on page; No discount applied (0%)
+- **Regular Camp Pillow - Blue** (6000BL) — Coppel: Price mismatch: expected $532.00 (Shopify 399 ÷ 0.75), got $426.00
+- **Regular Camp Pillow - Blue** (6000BL) — Elektra: Price mismatch: expected $532.00 (Shopify 399 ÷ 0.75), got $452.00
+- **Regular Camp Pillow - Blue** (6000BL) — Walmart: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Regular Camp Pillow - Blue** (6000BL) — Martí: No discount applied (0%)
+- **Regular Camp Pillow - Blue** (6000BL) — Chedraui: No discount applied (0%)
+- **Regular Camp Pillow - Blue** (6000BL) — La Marina: No discount applied (0%)
+- **Regular Camp Pillow - Fox** (6000FX) — Liverpool: Price mismatch: expected $532.00 (Shopify 399 ÷ 0.75), got $426.00
+- **Regular Camp Pillow - Fox** (6000FX) — MercadoLibre: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Regular Camp Pillow - Fox** (6000FX) — Amazon: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Regular Camp Pillow - Fox** (6000FX) — Coppel: Price mismatch: expected $532.00 (Shopify 399 ÷ 0.75), got $426.00
+- **Regular Camp Pillow - Fox** (6000FX) — Elektra: Price mismatch: expected $532.00 (Shopify 399 ÷ 0.75), got $452.00
+- **Regular Camp Pillow - Fox** (6000FX) — Walmart: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Regular Camp Pillow - Fox** (6000FX) — Martí: No discount applied (0%)
+- **Regular Camp Pillow - Fox** (6000FX) — Chedraui: No discount applied (0%)
+- **Regular Camp Pillow - Fox** (6000FX) — La Marina: No discount applied (0%)
+- **LEEF Regular 0F Sleeping Bag - Black/Sage** (1501BK) — Liverpool: Price mismatch: expected $2932.00 (Shopify 2199 ÷ 0.75), got $2319.00
+- **LEEF Regular 0F Sleeping Bag - Black/Sage** (1501BK) — MercadoLibre: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **LEEF Regular 0F Sleeping Bag - Black/Sage** (1501BK) — Amazon: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **LEEF Regular 0F Sleeping Bag - Black/Sage** (1501BK) — Coppel: Price mismatch: expected $2932.00 (Shopify 2199 ÷ 0.75), got $2319.00
+- **LEEF Regular 0F Sleeping Bag - Black/Sage** (1501BK) — Elektra: Price mismatch: expected $2932.00 (Shopify 2199 ÷ 0.75), got $2464.00
+- **LEEF Regular 0F Sleeping Bag - Black/Sage** (1501BK) — Walmart: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **LEEF Regular 0F Sleeping Bag - Black/Sage** (1501BK) — Martí: Price mismatch: expected $2932.00 (Shopify 2199 ÷ 0.75), got $2319.00
+- **LEEF Regular 0F Sleeping Bag - Black/Sage** (1501BK) — Chedraui: No discount applied (0%)
+- **LEEF Regular 0F Sleeping Bag - Black/Sage** (1501BK) — La Marina: No discount applied (0%)
+- **LEEF Regular 20F Sleeping Bag - Moss/Sky** (1504MS) — Liverpool: Price mismatch: expected $2665.33 (Shopify 1999 ÷ 0.75), got $2129.00
+- **LEEF Regular 20F Sleeping Bag - Moss/Sky** (1504MS) — MercadoLibre: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **LEEF Regular 20F Sleeping Bag - Moss/Sky** (1504MS) — Amazon: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **LEEF Regular 20F Sleeping Bag - Moss/Sky** (1504MS) — Coppel: Price mismatch: expected $2665.33 (Shopify 1999 ÷ 0.75), got $2129.00
+- **LEEF Regular 20F Sleeping Bag - Moss/Sky** (1504MS) — Elektra: Price mismatch: expected $2665.33 (Shopify 1999 ÷ 0.75), got $2265.00
+- **LEEF Regular 20F Sleeping Bag - Moss/Sky** (1504MS) — Walmart: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **LEEF Regular 20F Sleeping Bag - Moss/Sky** (1504MS) — Martí: Price mismatch: expected $2665.33 (Shopify 1999 ÷ 0.75), got $2132.00
+- **LEEF Regular 20F Sleeping Bag - Moss/Sky** (1504MS) — Chedraui: No discount applied (0%)
+- **LEEF Regular 20F Sleeping Bag - Moss/Sky** (1504MS) — La Marina: No discount applied (0%)
+- **Evergreen Regular 20F Left Zip Sleeping Bag** (1207NO) — Liverpool: Price mismatch: expected $2265.33 (Shopify 1699 ÷ 0.75), got $1819.00
+- **Evergreen Regular 20F Left Zip Sleeping Bag** (1207NO) — MercadoLibre: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Evergreen Regular 20F Left Zip Sleeping Bag** (1207NO) — Amazon: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Evergreen Regular 20F Left Zip Sleeping Bag** (1207NO) — Coppel: Price mismatch: expected $2265.33 (Shopify 1699 ÷ 0.75), got $1819.00
+- **Evergreen Regular 20F Left Zip Sleeping Bag** (1207NO) — Elektra: Price mismatch: expected $2265.33 (Shopify 1699 ÷ 0.75), got $1925.00
+- **Evergreen Regular 20F Left Zip Sleeping Bag** (1207NO) — Walmart: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Evergreen Regular 20F Left Zip Sleeping Bag** (1207NO) — Martí: Price mismatch: expected $2265.33 (Shopify 1699 ÷ 0.75), got $1812.00
+- **Evergreen Regular 20F Left Zip Sleeping Bag** (1207NO) — Chedraui: No discount applied (0%)
+- **Evergreen Regular 20F Left Zip Sleeping Bag** (1207NO) — La Marina: Price mismatch: expected $2265.33 (Shopify 1699 ÷ 0.75), got $2665.00; No discount applied (0%)
+- **LEEF Mummy Long 30F Sleeping Bag** (1509BK) — Liverpool: Price mismatch: expected $2398.67 (Shopify 1799 ÷ 0.75), got $1919.00
+- **LEEF Mummy Long 30F Sleeping Bag** (1509BK) — MercadoLibre: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **LEEF Mummy Long 30F Sleeping Bag** (1509BK) — Amazon: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **LEEF Mummy Long 30F Sleeping Bag** (1509BK) — Coppel: Price mismatch: expected $2398.67 (Shopify 1799 ÷ 0.75), got $1919.00
+- **LEEF Mummy Long 30F Sleeping Bag** (1509BK) — Elektra: Price mismatch: expected $2398.67 (Shopify 1799 ÷ 0.75), got $2039.00
+- **LEEF Mummy Long 30F Sleeping Bag** (1509BK) — Walmart: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **LEEF Mummy Long 30F Sleeping Bag** (1509BK) — Martí: Price mismatch: expected $2398.67 (Shopify 1799 ÷ 0.75), got $1919.00
+- **LEEF Mummy Long 30F Sleeping Bag** (1509BK) — La Marina: No discount applied (0%)
+- **Evergreen Regular 0F Left Zip Sleeping Bag** (1206LV) — Liverpool: Price mismatch: expected $2532.00 (Shopify 1899 ÷ 0.75), got $1999.00
+- **Evergreen Regular 0F Left Zip Sleeping Bag** (1206LV) — MercadoLibre: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Evergreen Regular 0F Left Zip Sleeping Bag** (1206LV) — Amazon: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Evergreen Regular 0F Left Zip Sleeping Bag** (1206LV) — Coppel: Price mismatch: expected $2532.00 (Shopify 1899 ÷ 0.75), got $1999.00
+- **Evergreen Regular 0F Left Zip Sleeping Bag** (1206LV) — Elektra: Price mismatch: expected $2532.00 (Shopify 1899 ÷ 0.75), got $2124.00
+- **Evergreen Regular 0F Left Zip Sleeping Bag** (1206LV) — Walmart: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Evergreen Regular 0F Left Zip Sleeping Bag** (1206LV) — Martí: Price mismatch: expected $2532.00 (Shopify 1899 ÷ 0.75), got $1999.00
+- **Evergreen Regular 0F Left Zip Sleeping Bag** (1206LV) — Chedraui: No discount applied (0%)
+- **Evergreen Regular 0F Left Zip Sleeping Bag** (1206LV) — La Marina: No discount applied (0%)
+- **Response 10F Degree Sleeping Bag - Blue** (9101BL) — Liverpool: No discount applied (0%)
+- **Response 10F Degree Sleeping Bag - Blue** (9101BL) — MercadoLibre: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Response 10F Degree Sleeping Bag - Blue** (9101BL) — Amazon: No discount applied (0%)
+- **Response 10F Degree Sleeping Bag - Blue** (9101BL) — Coppel: Price mismatch: expected $1798.67 (Shopify 1349 ÷ 0.75), got $1439.00
+- **Response 10F Degree Sleeping Bag - Blue** (9101BL) — Elektra: Price mismatch: expected $1798.67 (Shopify 1349 ÷ 0.75), got $1529.00
+- **Response 10F Degree Sleeping Bag - Blue** (9101BL) — Walmart: Could not extract price (selector empty and no JSON-LD) — check link or selector
+- **Response 10F Degree Sleeping Bag - Blue** (9101BL) — Martí: Price mismatch: expected $1798.67 (Shopify 1349 ÷ 0.75), got $1439.00
+- **Response 10F Degree Sleeping Bag - Blue** (9101BL) — Chedraui: No discount applied (0%)
+- **Response 10F Degree Sleeping Bag - Blue** (9101BL) — La Marina: No discount applied (0%)

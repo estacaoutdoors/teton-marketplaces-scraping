@@ -20,8 +20,8 @@ const { MARKETPLACES, SHEETS_CONFIG, THRESHOLDS } = require('../config');
 const RESULTS_FILE = path.join(__dirname, '../data/results.json');
 const ALERTS_FILE = path.join(__dirname, '../data/alerts.md');
 const RESULTS_SHEET = 'Monitoring Results';
-const NAV_TIMEOUT = 45000;
-const SELECTOR_TIMEOUT = 12000;
+const NAV_TIMEOUT = 35000;
+const SELECTOR_TIMEOUT = 20000;
 
 /* ---------- helpers ---------- */
 
@@ -152,7 +152,10 @@ async function scrapeOne(page, marketplaceKey, url, shopifyPrice) {
   const result = { marketplace: marketplaceKey, url, status: 'ok', price: null, originalPrice: null, discount: null, errors: [] };
 
   try {
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: NAV_TIMEOUT });
+    // domcontentloaded instead of networkidle2: chatty sites (Liverpool, Sanborns,
+    // Chedraui) never go network-idle and were timing out. waitForSelector below
+    // handles the client-side render wait.
+    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: NAV_TIMEOUT });
     try {
       await page.waitForSelector(cfg.selector.price, { timeout: SELECTOR_TIMEOUT });
     } catch (_) { /* fall through to JSON-LD fallback */ }

@@ -7,10 +7,11 @@ const MARKETPLACES = {
     column: 'Q',
     formula: 0.75,
     // Verified on: /tienda/pdp/sleeping-bag-teton-lil-bridger-(/99973226041 → $1,759 / $2,198
+    // data-testid attributes confirmed by JC from live page HTML 2026-07-20 (stable, preferred)
     selector: {
-      price: 'span.text-feedback-error',          // current (discounted) price, red
-      originalPrice: 'span.line-through',          // struck-through original price
-      discount: null                               // no % badge on PDP
+      price: '[data-testid="discounted"], span.text-feedback-error',   // current price; class as fallback
+      originalPrice: '[data-testid="original"], span.line-through',    // compare-at price
+      discount: null                                                    // no % badge on PDP
     },
     discountType: 'computed'
   },

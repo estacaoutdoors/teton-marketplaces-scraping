@@ -12,4 +12,3 @@ build/
 .vscode/
 credentials.json
 token.json
-data/results.json
